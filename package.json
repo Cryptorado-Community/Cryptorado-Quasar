@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"No test specified\" && exit 0",
-    "deploy": "push-dir --dir=dist/spa-<theme> --remote=gh-pages --branch=master"
+    "deploy": "push-dir --dir=dist/spa-mat --remote=gh-pages --branch=master"
   },
   "dependencies": {
     "axios": "^0.18.0",
