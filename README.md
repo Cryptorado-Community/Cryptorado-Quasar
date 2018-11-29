@@ -51,6 +51,9 @@ An SSG can be hosted like this
 - Self hosted
   - ***Make it a grain for https://sandstorm.io/***
   - Make a docker?
+- To host the site under our own domain on IPFS, [this is pretty comprehensive](https://gist.github.com/claus/1287f47b5fbaaea338ac8a04d02bf258).
+- To upload site content to IPFS, and access it from IPFS gateway, and redirect our domain name to point to the IPFS gateway, [this article](https://medium.com/@chrismatthieu/hosting-a-website-via-ipfs-for-free-afee39b84553) goes over how to do that.
+  
 
 ## Desired Content:
 
