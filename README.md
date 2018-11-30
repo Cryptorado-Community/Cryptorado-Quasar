@@ -29,6 +29,11 @@ Want to have a distributed / redundant store or the website. Ideally self hostin
 An SSG can be hosted like this
   - [ ] https://www.netlify.com/
     - global CDN
+  - [ ] https://ipfs.io/ipns/peerpad.net/#/
+    - [ ] check out this as a model :point_up:
+    - ipns for human named data 
+    - PeerPad as way to edit events and give write access
+    - PeerPad does not rely on a second or third-party. All nodes talk to each other directly, without intermediation.
 
 ### Content Management System for easy addition of select content
    - [ ] Ability to Add events
