@@ -26,7 +26,7 @@ A community run and maintained website that anyone can host and contribute to. I
 ### Hosting:
 Want to have a distributed / redundant store or the website. Ideally self hosting is very easy and secure. Want to get something like this: https://en.wikipedia.org/wiki/Content_delivery_network
 
-An SSG can be hosted like this
+An SSG can be hosted like this:
   - [ ] https://www.netlify.com/
     - global CDN
   - [ ] https://ipfs.io/ipns/peerpad.net/#/
@@ -34,6 +34,12 @@ An SSG can be hosted like this
     - ipns for human named data 
     - PeerPad as way to edit events and give write access
     - PeerPad does not rely on a second or third-party. All nodes talk to each other directly, without intermediation.
+
+#### Distributed DNS:
+
+- https://handshake.org/
+  - Decentralized certificate authority and naming
+An experimental peer-to-peer root DNS.
 
 ### Content Management System for easy addition of select content
    - [ ] Ability to Add events
