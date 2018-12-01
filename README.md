@@ -41,6 +41,10 @@ A community run and maintained website that anyone can host and contribute to. I
 - Possible inspiration:
   - https://github.com/discourse/discourse
     - Use as a new community alt. to slack?
+    - could qualify for
+      - https://blog.discourse.org/2018/11/free-hosting-for-open-source-v2/
+      - https://blog.discourse.org/2014/02/discourse-installs-for-non-profit-and-education/
+
   - https://github.com/rtfd/readthedocs.org
     - Backend to self host: http://www.sphinx-doc.org/en/master/
     - Documentation using **sphinx_rtd_theme** :point_left: :heart:
@@ -54,14 +58,14 @@ A community run and maintained website that anyone can host and contribute to. I
         - EFF cyber security recommendations
 
 
-### Map of cryptocurrency accepting businesses
+### Map of Cryptocurrency Accepting Businesses
 
 - [ ] Standalone service - linked/integrated into main website
 - [ ] Integration with Coinmap
   - https://coinmap.org/#/map/39.77529722/-104.95857239/11
    
 
-### Media highlights
+### Media Highlights
 - integration with:
   - [ ] youtube (https://www.youtube.com/channel/UCySU1TwgrLAU_1tF8lDt9bQ)
   - [ ] twitter (TBD)
