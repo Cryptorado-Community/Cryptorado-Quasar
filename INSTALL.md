@@ -5,4 +5,6 @@ Instructions and tips for development
   - [Our Github Pages Repo](https://github.com/Decentralize-Colorado/decentralize-colorado.github.io)
     - `https://github.com/Decentralize-Colorado/decentralize-colorado.github.io`
     - [Live Site](https://decentralize-colorado.github.io)
- 
+
+## Components (all the fun things to use!)
+- https://quasar-framework.org/components/
