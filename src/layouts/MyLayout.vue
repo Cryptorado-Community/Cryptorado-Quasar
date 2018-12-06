@@ -20,6 +20,8 @@
           Decentralize Colorado Home
           <div slot="subtitle">A Resource for the Colorado Blockchain Community</div>
         </q-toolbar-title>
+        <q-btn color="primary" wait-for-ripple icon="chat" label="Slack Chat Group" @click.native="openURL('http://launchpass.com/coloradoblockchain')" />
+
       </q-toolbar>
     </q-layout-header>
 
@@ -67,7 +69,7 @@
                 @show="notify('Opened a Collapsible')"
                 @hide="notify('Closed a Collapsible', true)"
               >
-              <q-item @click.native="openURL('http://Coinmap.org')">
+              <q-item @click.native="openURL('https://coinmap.org/#/map/39.76442532/-104.85478670/11')">
                 <q-item-side icon="map" />
                 <q-item-main label="Local Crypto Businesses" sublabel="Coinmap.org" />
               </q-item>
