@@ -1,8 +1,8 @@
 {
-  "name": "dc_web",
+  "name": "CORE_Web",
   "version": "1.0.0",
-  "description": "The home of Decentralize Colorado",
-  "productName": "Decentralize Colorado",
+  "description": "The home of th Colorado Blockchain Community",
+  "productName": "Colorado Blockchain Community",
   "cordovaId": "org.cordova.quasar.app",
   "author": "Dan Shields <danwshields@gmail.com>",
   "private": true,
