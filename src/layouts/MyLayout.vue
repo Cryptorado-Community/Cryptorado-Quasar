@@ -17,7 +17,7 @@
         </q-btn>
 
         <q-toolbar-title>
-          Decentralize Colorado Home
+          Colorado Community Home
           <div slot="subtitle">A Resource for the Colorado Blockchain Community</div>
         </q-toolbar-title>
         <q-btn color="primary" wait-for-ripple icon="chat" label="Slack Chat Group" @click.native="openURL('http://launchpass.com/coloradoblockchain')" />
