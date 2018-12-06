@@ -1,5 +1,7 @@
 # New Community Website
 ---
+### Live demo at: https://decentralize-colorado.github.io
+---
 ## Goal:
 A community run and maintained website that anyone can host and contribute to. It will be the place to go to find out what is going on in the Colorado Blockchain & DLT community. Resources will be available to get connected, to learn, and to get involved in all that is going on. 
 
