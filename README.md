@@ -35,7 +35,7 @@ A community run and maintained website that anyone can host and contribute to. I
     - Redit like? Discourse like?
 (see below - almost the same framework needed for a wiki) 
 
-#### A Community Wiki for resources
+#### A Community Wiki for Educational / Informational content
 - [ ] Very likely a stand alone from the website itself - just linked/integrated
 - [ ] Easy to contribute, highly navigable
 - [ ] Easy to have community moderate
@@ -61,32 +61,27 @@ A community run and maintained website that anyone can host and contribute to. I
         - EFF cyber security recommendations
         - [ethviewer.live](ethviewer.live) website and blockchian expainers
 
-
-### Map of Cryptocurrency Accepting Businesses
-
-- [ ] Standalone service - linked/integrated into main website
-  - [ ] Way for anyone to add/flag/review places
-- [ ] Integration with Coinmap
-  - https://coinmap.org/#/map/39.77529722/-104.95857239/11
-   
-
-### Media Highlights
+#### Media Highlights
 - integration with:
   - [ ] youtube (https://www.youtube.com/channel/UCySU1TwgrLAU_1tF8lDt9bQ)
   - [ ] twitter (TBD)
   - [ ] medium (TBD)
   
-## Desired Theme/Layout:
-  - [ ] A **strong** sidebar with links
-    - http://www.ethdocs.org/en/latest/index.html
-    - Fixed as you scroll the main page
-    - No header/footer needed / all inside the sidebar
-    - https://larecipe.binarytorch.com.my
-      - Can be hidden as a menu
-        - Reactive:
-          - Default open on desktop
-          - Default close on phone
+### A Community Resources Bulletin Board
 
+#### Project Board
+- [ ] Company Projects AND **Community Projects **
+  - [ ] What are you working on?
+  - [ ] What help do you need? (jobs)
+  - [ ] **Intergate bounties**
+
+
+#### Map of Cryptocurrency Accepting Businesses
+
+- [ ] Standalone service - linked/integrated into main website
+  - [ ] Way for anyone to add/flag/review places
+- [ ] Integration with Coinmap
+  - https://coinmap.org/#/map/39.77529722/-104.95857239/11
 
 ## Desired Architecture and Features:
 
