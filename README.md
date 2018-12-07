@@ -11,6 +11,7 @@ A community run and maintained website that anyone can host and contribute to. I
 
 - [ ] Anyone can add events
   - [ ] Integrated form to submit any event.
+    - [PeerPad](https://ipfs.io/ipns/peerpad.net/#/) as a way to do this? 
     - [ ] Creates an issue /pull request to the hosting repo.
     - [ ] Secondary system to allow full commit  access once approved.
 - [ ] Automatically pulls new events from a linked site - like meetup.com
@@ -58,11 +59,13 @@ A community run and maintained website that anyone can host and contribute to. I
         - Blockchain 101 links
         - Dev resources to self-learn
         - EFF cyber security recommendations
+        - [ethviewer.live](ethviewer.live) website and blockchian expainers
 
 
 ### Map of Cryptocurrency Accepting Businesses
 
 - [ ] Standalone service - linked/integrated into main website
+  - [ ] Way for anyone to add/flag/review places
 - [ ] Integration with Coinmap
   - https://coinmap.org/#/map/39.77529722/-104.95857239/11
    
@@ -87,35 +90,58 @@ A community run and maintained website that anyone can host and contribute to. I
 
 ## Desired Architecture and Features:
 
-### Static Website w/ Generator
-   - [ ] Optimized SEO
-   - [ ] Lightning fast and light to host and load
-   - [ ] Flat pages instead of a database
-   - [ ] Git repo - so history is maintained
-   - Possible SSGs:
-     - Lists:
-       - https://gridsome.org/
-       - https://vuepress.vuejs.org/
-       - https://www.gatsbyjs.org/
-       - https://www.staticgen.com/
-       - https://www.cmscritic.com/awards/
-       - https://jekyllrb.com/
-       - https://gohugo.io/
-    - Alt. Non-SSG:
-        - https://ghost.org/
-        - https://quasar-framework.org/ (full frontend framework ~= SSG)
+We desire a distributed content hosting and contribution model. So that the content is redundant, those using it support and validate all peers, and are able to add content to the peer network. 
 
-### Hosting:
-Want to have a distributed / redundant store or the website. Ideally self hosting is very easy and secure. Want to get something like this: https://en.wikipedia.org/wiki/Content_delivery_network
+### Static Website
 
-An SSG can be hosted like this:
+Desire no server side compute needed. Everyone who hosts our resources can be a server and client.
+What does a static site model provide?
+- [ ] Optimized SEO
+- [ ] Lightning fast and light to host and load
+- [ ] Flat pages as database
+- [ ] Can be tracked in a Git repo - so history is maintained and easy to host among distributed peers
+
+#### Easy Frontend Site Managment
+- http://quasar-framework.org
+  - Full Front end Framework, headless in that sense.
+  - Build on Vue and easy to use/ learn
+  - Very easy to get seomthing looking good with a lot of great components 
+
+### Distributed Hosting / CDN:
+
+Want to have a distributed / redundant store for the website. Ideally self hosting is very easy and secure. Want to get something like this: https://en.wikipedia.org/wiki/Content_delivery_network
+
+An site can be hosted like this:
   - [ ] https://www.netlify.com/
     - global CDN
-  - [ ] https://ipfs.io/ipns/peerpad.net/#/
-    - [ ] check out this as a model :point_up:
-    - ipns for human named data 
-    - PeerPad as way to edit events and give write access
-    - PeerPad does not rely on a second or third-party. All nodes talk to each other directly, without intermediation.
+  - [ ] [PeerPad](https://ipfs.io/ipns/peerpad.net/#/) check out this as a model :point_left:
+    - IPNS for human named data 
+    - [PeerPad](https://ipfs.io/ipns/peerpad.net/#/) as way to edit events and give write access?
+
+
+##### Self hosted site:
+
+Want a very easy onboarding process - just install and you are a host + node for all the community resources.
+
+  - To host the site under our own domain on IPFS, [this is pretty comprehensive](https://gist.github.com/claus/1287f47b5fbaaea338ac8a04d02bf258).
+  - To upload site content to IPFS, and access it from IPFS gateway, and redirect our domain name to point to the IPFS gateway, [this article](https://medium.com/@chrismatthieu/hosting-a-website-via-ipfs-for-free-afee39b84553) goes over how to do that.
+  - ***Make this IPFS a grain for https://sandstorm.io/***
+  - And/or make a simple docker / other install for people
+    - Could this be on mobile too? (needs to be lightweight enough)
+    
+To get started - and eventually compliment community hosing, use:
+- GitHub/Lab Pages
+- Firebase
+- Netlify
+- Other free options?
+    
+##### Other self hosted resources:
+Wantt to make a set of services - keep this in mind when finding a Website hosting solution:
+- cloud shared community data
+  - media
+  - project Git repos
+  - chat server (federeated?)
+  - wiki 
 
 #### Distributed DNS:
 
@@ -123,26 +149,22 @@ An SSG can be hosted like this:
   - Decentralized certificate authority and naming
 An experimental peer-to-peer root DNS.
 
-### Content Management System for easy addition of select content
-   - [ ] Ability to Add events
-   - [ ] Blog type bulletin board
-   - [ ] Headless - so can use alternatives with SSG
-     - https://snipcart.com/blog/react-graphql-grav-cms-headless-
-    - Possible CMS options:
-        - https://getgrav.org
-        - https://forestry.io/ (great integration for use with SSG and hosting on github)
-        - https://plone.com/ (not a satic option)
-        - http://gantry.org/ (grav SSG CSM)
-        - WordPress
-        - Drupal
+### Content Management System (CMS) for easy addition of select content
 
-### Ability to host in a distributed manner
-- GitHub/Lab Pages
-- Firebase
-- Netlify
-- Other free options?
-- Self hosted
-  - ***Make it a grain for https://sandstorm.io/***
-  - Make a docker?
-- To host the site under our own domain on IPFS, [this is pretty comprehensive](https://gist.github.com/claus/1287f47b5fbaaea338ac8a04d02bf258).
-- To upload site content to IPFS, and access it from IPFS gateway, and redirect our domain name to point to the IPFS gateway, [this article](https://medium.com/@chrismatthieu/hosting-a-website-via-ipfs-for-free-afee39b84553) goes over how to do that.
+Build it integrated into the site - we can use Quazar to make pages that submit to IPFS backend?
+- [ ] [PeerPad](https://ipfs.io/ipns/peerpad.net/#/)  does not rely on a second or third-party. All nodes talk to each other directly, without intermediation.
+  - [ ] Ability to Add events
+  - [ ] Blog type bulletin board
+  
+Also could use CMS
+- [ ] Headless - so can use alternatives with SSG
+ - https://snipcart.com/blog/react-graphql-grav-cms-headless-
+- Possible CMS options:
+    - https://getgrav.org
+    - https://forestry.io/ (great integration for use with SSG and hosting on github)
+    - https://plone.com/ (not a satic option)
+    - http://gantry.org/ (grav SSG CSM)
+    - WordPress
+    - Drupal
+
+
