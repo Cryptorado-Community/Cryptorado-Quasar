@@ -26,16 +26,21 @@ A community run and maintained website that anyone can host and contribute to. I
 ### Three Community ways to Communicate/Interact Online: 
 
 #### Community Chat
+For short form conversation and pressing news/issues
 - [ ] Not hosted on the site, but linked.
 - [ ] https://matrix.org based with bridges to various clients (riot to start)
   - slack + discord + riot ( + signal + wire + telegram + ....)
 
-#### Community Bulletin Board (Blog)
-- [ ] A forum for the community
-    - Redit like? Discourse like?
+#### Community Forum or Blog
+A long form and focused medium to talk on specific topics.
+  - Redit like? Discourse like?
+  - **Reputation system like [Stack_Exchange](https://en.wikipedia.org/wiki/Stack_Exchange)** 
 (see below - almost the same framework needed for a wiki) 
+  - **OR** more like A blog platform? Something like [medium])(http://medium.com)?
+  
 
-#### A Community Wiki for Educational / Informational content
+#### A Community Wiki 
+For Educational / Informational content. refined ideas from Forum. 
 - [ ] Very likely a stand alone from the website itself - just linked/integrated
 - [ ] Easy to contribute, highly navigable
 - [ ] Easy to have community moderate
