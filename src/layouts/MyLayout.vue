@@ -1,33 +1,34 @@
 <template>
   <q-layout view="hHh Lpr lFf">
     <q-layout-header>
-
-        <!-- <q-toolbar-title>
-          <q-btn flat color=white label="Colorado Community Home" to="/" />
-          <div slot="subtitle">A Resource for the Colorado Blockchain Community</div>
-        </q-toolbar-title> -->
-
-        <!-- <q-btn to='/Events' icon="calendar_today" label="Events" sublabel="Calendar"/>
-
-        <q-btn color="primary" icon="chat" label="Slack Chat Group" @click.native="openURL('http://launchpass.com/coloradoblockchain')" /> -->
-
         <q-tabs class="shadow-1" animated swipeable color="tertiary" glossy align="justify">
 
-  <q-route-tab
-    label="Colorado Community Home"
-    to="/"
-    icon="home"
-    slot="title"
-  />
-  <q-route-tab
-    label="Events"
-    to="/Events"
-    icon="calendar_today"
-    slot="title"
-  />
-  <div slot="subtitle">A Resource for the Colorado Blockchain Community</div>
+          <q-route-tab
+            label="Colorado Community Home"
+            to="/"
+            icon="home"
+            slot="title"
+          />
+          <q-route-tab
+            label="Events"
+            to="/Events"
+            icon="calendar_today"
+            slot="title"
+          />
+          <q-route-tab
+            label="Chat"
+            to="/Chat"
+            icon="people"
+            slot="title"
+          />
+          <q-route-tab
+            label="Resources"
+            to="/Resources"
+            icon="device_hub"
+            slot="title"
+          />
 
-</q-tabs>
+        </q-tabs>
 
     </q-layout-header>
 
@@ -68,27 +69,6 @@
               </q-item>
         </q-collapsible>
 
-        <q-collapsible
-                v-model="open"
-                icon="chat"
-                label="Community Resources"
-                @show="notify('Opened a Collapsible')"
-                @hide="notify('Closed a Collapsible', true)"
-              >
-              <q-item @click.native="openURL('https://coinmap.org/#/map/39.76442532/-104.85478670/11')">
-                <q-item-side icon="map" />
-                <q-item-main label="Local Crypto Businesses" sublabel="Coinmap.org" />
-              </q-item>
-              <q-item @click.native="openURL('https://docs.google.com/spreadsheets/d/1Bvpzr162eWFRo_f3tuhOnCVF-l5USTSBdqeJGVBqjjs/edit#gid=0')">
-                <q-item-side icon="list_alt" />
-                <q-item-main label="Colorado Blockchain Companies" />
-              </q-item>
-              <q-item @click.native="openURL('https://docs.google.com/spreadsheets/d/1Bvpzr162eWFRo_f3tuhOnCVF-l5USTSBdqeJGVBqjjs/edit#gid=0')">
-                <q-item-side icon="laptop_chromebook" />
-                <q-item-main label="Free Coworking" sublabel="Every Thursday" />
-              </q-item>
-        </q-collapsible>
-
         <q-item @click.native="openURL('http://forum.quasar-framework.org')">
           <q-item-side icon="record_voice_over" />
           <q-item-main label="Forum" sublabel="forum.quasar-framework.org" />
@@ -108,8 +88,8 @@
 
       <router-view />
 
-      <q-page-sticky position="left" :offset="[-20, -20]">
-          <q-btn fab-mini color="red" icon="fast_forward" class="animate-pop"   @click="leftDrawerOpen = !leftDrawerOpen" />
+      <q-page-sticky position="left" :offset="[-12, -12]">
+          <q-btn fab-mini color="red" icon="keyboard_arrow_right" class="animate-pop"   @click="leftDrawerOpen = !leftDrawerOpen" />
       </q-page-sticky>
 
     </q-page-container>
