@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    Testing
+    <img alt="decentralizeco logo" width="100%" src="~/assets/Colorado-Love-Flag-1350-x-900.png">
   </q-page>
 </template>
 

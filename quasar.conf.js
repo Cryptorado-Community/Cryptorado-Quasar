@@ -42,6 +42,11 @@ module.exports = function (ctx) {
     // framework: 'all' --- includes everything; for dev only!
     framework: {
       components: [
+        'QPageSticky',
+        'QTabs',
+        'QTab',
+        'QTabPane',
+        'QRouteTab',
         'QStepper',
         'QStep',
         'QStepperNavigation',

@@ -1,28 +1,34 @@
 <template>
   <q-layout view="hHh Lpr lFf">
     <q-layout-header>
-      <q-toolbar
-        color="primary"
-        :glossy="$q.theme === 'mat'"
-        :inverted="$q.theme === 'ios'"
-      >
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-        >
-          <q-icon name="menu" />
-        </q-btn>
 
-        <q-toolbar-title>
-          Colorado Community Home
+        <!-- <q-toolbar-title>
+          <q-btn flat color=white label="Colorado Community Home" to="/" />
           <div slot="subtitle">A Resource for the Colorado Blockchain Community</div>
-        </q-toolbar-title>
-        <q-btn color="primary" wait-for-ripple icon="chat" label="Slack Chat Group" @click.native="openURL('http://launchpass.com/coloradoblockchain')" />
+        </q-toolbar-title> -->
 
-      </q-toolbar>
+        <!-- <q-btn to='/Events' icon="calendar_today" label="Events" sublabel="Calendar"/>
+
+        <q-btn color="primary" icon="chat" label="Slack Chat Group" @click.native="openURL('http://launchpass.com/coloradoblockchain')" /> -->
+
+        <q-tabs class="shadow-1" animated swipeable color="tertiary" glossy align="justify">
+
+  <q-route-tab
+    label="Colorado Community Home"
+    to="/"
+    icon="home"
+    slot="title"
+  />
+  <q-route-tab
+    label="Events"
+    to="/Events"
+    icon="calendar_today"
+    slot="title"
+  />
+  <div slot="subtitle">A Resource for the Colorado Blockchain Community</div>
+
+</q-tabs>
+
     </q-layout-header>
 
     <q-layout-drawer
@@ -35,7 +41,7 @@
         inset-delimiter
       >
         <!-- <q-list-header>Essential Links</q-list-header> -->
-        <q-item @click.native="openURL('http://quasar-framework.org')">
+        <q-item to='/Events'>
           <q-item-side icon="calendar_today" />
           <q-item-main label="Events" sublabel="Calendar"/>
         </q-item>
@@ -99,7 +105,13 @@
     </q-layout-drawer>
 
     <q-page-container>
+
       <router-view />
+
+      <q-page-sticky position="left" :offset="[-20, -20]">
+          <q-btn fab-mini color="red" icon="fast_forward" class="animate-pop"   @click="leftDrawerOpen = !leftDrawerOpen" />
+      </q-page-sticky>
+
     </q-page-container>
   </q-layout>
 </template>
