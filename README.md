@@ -9,6 +9,23 @@ A community run and maintained website that anyone can host and contribute to. I
 
 ### An Event and Meetup Calendar
 
+**Want to take the UI and features of https://sched.com/directory**
+Thus one can easily filter and find events and meetups that fit thier interests and build a personal schedual.
+
+- fliters:
+  - meetup name
+  - tags/types/topic (many options, possibly as many as people add to events unristricted)
+  - date range
+  - time of day
+  - location (city, possibly area/zone on map, even by venue?)
+  - cost
+  
+- Assemble a personal adgenda:
+  - check for conflicting times
+  - export to your calendar
+  - RSVP to organizers - link. Plug in any RSVP tool/ticketing system. Could just be an email. 
+  
+
 - [ ] Anyone can add events
   - [ ] Integrated form to submit any event.
     - [PeerPad](https://ipfs.io/ipns/peerpad.net/#/) as a way to do this? 
