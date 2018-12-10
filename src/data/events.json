@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "summary": "Test event",
+    "description": "Some extra info goes here",
+    "location":" 'Office of the Divine Randomness, 1232 Main St., Denver, CO'",
+    "start": {
+      "dateTime": "2018-12-16T14:00:00",
+      "timeZone": "Europe/Zurich"
+    },
+    "end": {
+      "dateTime": "2018-12-16T16:30:00",
+      "timeZone": "Europe/Zurich"
+    },
+    "color": "positive",
+    "attendees": [
+      {
+        "id": 5,
+        "email": "somebody@somewhere.com",
+        "displayName": "John Q. Public",
+        "organizer": false,
+        "self": false,
+        "resource": false
+      },
+      {
+        "id": 6,
+        "email": "somebody@somewhere.com",
+        "displayName": "John Q. Public",
+        "organizer": false,
+        "self": false,
+        "resource": false
+      }
+    ]
+  }
+]

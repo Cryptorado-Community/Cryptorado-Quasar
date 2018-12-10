@@ -41,6 +41,9 @@ import {
   CalendarMultiDay,
   CalendarAgenda
 } from 'quasar-calendar'
+
+import eventsData from '../data/events.json'
+
 export default {
   name: 'PageIndex',
   components: {
@@ -57,189 +60,11 @@ export default {
   },
   data () {
     return {
-      eventArray: [
-        {
-          id: 1,
-          summary: 'Test event',
-          description: 'Some extra info goes here',
-          location: 'Office of the Divine Randomness, 1232 Main St., Denver, CO',
-          start: {
-            dateTime: '2018-02-16T14:00:00',
-            timeZone: 'Europe/Zurich'
-          },
-          end: {
-            dateTime: '2018-02-16T16:30:00',
-            timeZone: 'Europe/Zurich'
-          },
-          color: 'positive',
-          attendees: [
-            {
-              id: 5,
-              email: 'somebody@somewhere.com',
-              displayName: 'John Q. Public',
-              organizer: false,
-              self: false,
-              resource: false
-            },
-            {
-              id: 6,
-              email: 'somebody@somewhere.com',
-              displayName: 'John Q. Public',
-              organizer: false,
-              self: false,
-              resource: false
-            },
-            {
-              id: 7,
-              email: 'somebody@somewhere.com',
-              displayName: 'John Q. Public',
-              organizer: false,
-              self: false,
-              resource: false
-            },
-            {
-              id: 31,
-              email: '',
-              displayName: 'South Conference Room',
-              organizer: false,
-              self: false,
-              resource: true
-            }
-          ]
-        },
-        {
-          id: 3,
-          summary: 'Test event 2',
-          description: 'Some extra info goes here',
-          start: {
-            dateTime: '2018-02-16T17:30:00',
-            timeZone: 'America/New_York'
-          },
-          end: {
-            dateTime: '2018-02-16T18:30:00',
-            timeZone: 'America/New_York'
-          }
-        },
-        {
-          id: 4,
-          summary: 'Test event 3',
-          description: 'Some extra info goes here',
-          start: {
-            dateTime: '2018-02-13T10:30:00+0500'
-          },
-          end: {
-            dateTime: '2018-02-13T13:00:00+0500'
-          }
-        },
-        {
-          id: 5,
-          summary: 'All day event',
-          description: 'Some extra info goes here',
-          start: {
-            date: '2018-02-13'
-          },
-          end: {
-            date: '2018-02-13'
-          }
-        },
-        {
-          id: 103,
-          summary: 'All day x4',
-          description: 'Some extra info goes here',
-          start: {
-            date: '2018-02-15'
-          },
-          end: {
-            date: '2018-02-18'
-          }
-        },
-        {
-          id: 101,
-          summary: 'All day x3',
-          description: 'Some extra info goes here',
-          start: {
-            date: '2018-02-14'
-          },
-          end: {
-            date: '2018-02-16'
-          }
-        },
-        {
-          id: 102,
-          summary: 'All day x2',
-          description: 'Some extra info goes here',
-          start: {
-            date: '2018-02-14'
-          },
-          end: {
-            date: '2018-02-15'
-          }
-        },
-        {
-          id: 104,
-          summary: 'All day x4 #2',
-          description: 'Some extra info goes here',
-          start: {
-            date: '2018-02-14'
-          },
-          end: {
-            date: '2018-02-17'
-          }
-        },
-        {
-          id: 105,
-          summary: 'All day x4 #3',
-          description: 'Some extra info goes here',
-          start: {
-            date: '2018-02-14'
-          },
-          end: {
-            date: '2018-02-17'
-          }
-        },
-        {
-          id: 6,
-          summary: 'Overlapping event',
-          description: 'Some extra info goes here',
-          start: {
-            dateTime: '2018-02-13T11:30:00',
-            timeZone: 'America/New_York'
-          },
-          end: {
-            dateTime: '2018-02-13T12:30:00',
-            timeZone: 'America/New_York'
-          }
-        },
-        {
-          id: 7,
-          summary: 'Some event',
-          description: 'Some extra info goes here',
-          start: {
-            dateTime: '2018-02-13T06:30:00',
-            timeZone: 'America/New_York'
-          },
-          end: {
-            dateTime: '2018-02-13T07:30:00',
-            timeZone: 'America/New_York'
-          },
-          color: 'warning',
-          textColor: 'dark'
-        },
-        {
-          id: 8,
-          summary: 'Some other event',
-          description: 'Some extra info goes here',
-          start: {
-            dateTime: '2018-02-13T16:00:00',
-            timeZone: 'America/New_York'
-          },
-          end: {
-            dateTime: '2018-02-13T17:00:00',
-            timeZone: 'America/New_York'
-          }
-        }
-      ]
+      eventArray: []
     }
+  },
+  mounted () {
+    this.eventArray = eventsData
   },
   computed: {},
   methods: {
