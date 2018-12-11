@@ -25,6 +25,9 @@
 </style>
 
 <script>
+
+var dataURL = 'https://getipfs.com/QmcMnY5PXMnrBSekMu8HEE3jwq4jy5dwsdrnLBUkasjmtK' // IPFS data via gateway proxy
+
 import {
   date,
   QPage,
@@ -42,7 +45,7 @@ import {
   CalendarAgenda
 } from 'quasar-calendar'
 
-import eventsData from '../data/events.json'
+// import eventsData from '../data/events.json' // static local data import
 
 export default {
   name: 'PageIndex',
@@ -63,8 +66,12 @@ export default {
       eventArray: []
     }
   },
-  mounted () {
-    this.eventArray = eventsData
+  mounted () { // when the Vue app is booted up, this is run automatically.
+    // this.eventArray = eventsData // static local data import
+    this.$axios.get(dataURL)
+      .then((response) => {
+        this.eventArray = response.data // TODO: CORS issue
+      })
   },
   computed: {},
   methods: {
