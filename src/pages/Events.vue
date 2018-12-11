@@ -26,7 +26,9 @@
 
 <script>
 
-var dataURL = 'https://getipfs.com/QmcMnY5PXMnrBSekMu8HEE3jwq4jy5dwsdrnLBUkasjmtK' // IPFS data via gateway proxy
+// var dataURL = 'https://getipfs.com/QmcMnY5PXMnrBSekMu8HEE3jwq4jy5dwsdrnLBUkasjmtK' // IPFS data via gateway proxy -- needs CORS enabled
+// var dataURL = 'https://ipns.co/QmcMnY5PXMnrBSekMu8HEE3jwq4jy5dwsdrnLBUkasjmtK' // IPFS data via gateway proxy -- needs CORS enabled
+var dataURL = 'https://cloudflare-ipfs.com/ipfs/QmcMnY5PXMnrBSekMu8HEE3jwq4jy5dwsdrnLBUkasjmtK'
 
 import {
   date,
