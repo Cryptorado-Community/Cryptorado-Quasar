@@ -1,5 +1,50 @@
 <template>
   <q-page padding>
+    <q-list
+      no-border
+      link
+      inset-delimiter
+    >
+      <q-item to='/Events'>
+        <q-item-side icon="calendar_today" />
+        <q-item-main label="Events" sublabel="Calendar"/>
+      </q-item>
+
+      <q-item @click.native="openURL('http://quasar-framework.org')">
+        <q-item-side icon="people" />
+        <q-item-main label="Meetups" sublabel="Listing" />
+      </q-item>
+
+      <q-collapsible
+              v-model="open"
+              icon="chat"
+              label="Community Chat"
+              @show="notify('Opened a Collapsible')"
+              @hide="notify('Closed a Collapsible', true)"
+            >
+            <q-item @click.native="openURL('http://launchpass.com/coloradoblockchain')">
+              <q-item-side icon="chat_bubble_outline" />
+              <q-item-main label="Slack" />
+            </q-item>
+            <q-item @click.native="openURL('http://launchpass.com/coloradoblockchain')">
+              <q-item-side icon="chat_bubble_outline" />
+              <q-item-main label="Riot Chat" />
+            </q-item>
+      </q-collapsible>
+
+      <q-item @click.native="openURL('http://forum.quasar-framework.org')">
+        <q-item-side icon="record_voice_over" />
+        <q-item-main label="Forum" sublabel="forum.quasar-framework.org" />
+      </q-item>
+      <q-item @click.native="openURL('https://www.youtube.com/channel/UCySU1TwgrLAU_1tF8lDt9bQ')">
+        <q-item-side icon="video_library" />
+        <q-item-main label="Media" sublabel="YouTube" />
+      </q-item>
+      <q-item @click.native="openURL('https://twitter.com/coloblockchain')">
+        <q-item-side icon="rss feed" />
+        <q-item-main label="Twitter" sublabel="@coloblockchain" />
+      </q-item>
+    </q-list>
     <q-collapsible
             v-model="open"
             icon="chat"

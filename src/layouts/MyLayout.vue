@@ -36,52 +36,29 @@
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
-      <q-list
-        no-border
-        link
-        inset-delimiter
-      >
-        <!-- <q-list-header>Essential Links</q-list-header> -->
-        <q-item to='/Events'>
-          <q-item-side icon="calendar_today" />
-          <q-item-main label="Events" sublabel="Calendar"/>
-        </q-item>
+    <q-list-header>Filter</q-list-header>
+      <q-datetime
+        :value="startDate"
+        @change="val => startDate = val"
+        type="date"
+        color="green"
+        clearable
+        float-label="Start Date"
+        :max="endDate"
+      />
+      <q-datetime
+        :value="endDate"
+        @change="val => endDate = val"
+        type="date"
+        color="red"
+        clearable
+        float-label="End Date (optional)"
+        :min="startDate"
+      />
+      <q-chips-input v-model="cities_selected" placeholder="Select City" stack-label="List of Cities" @duplicate="duplicate">
+        <q-autocomplete @search="search" />
+      </q-chips-input>
 
-        <q-item @click.native="openURL('http://quasar-framework.org')">
-          <q-item-side icon="people" />
-          <q-item-main label="Meetups" sublabel="Listing" />
-        </q-item>
-
-        <q-collapsible
-                v-model="open"
-                icon="chat"
-                label="Community Chat"
-                @show="notify('Opened a Collapsible')"
-                @hide="notify('Closed a Collapsible', true)"
-              >
-              <q-item @click.native="openURL('http://launchpass.com/coloradoblockchain')">
-                <q-item-side icon="chat_bubble_outline" />
-                <q-item-main label="Slack" />
-              </q-item>
-              <q-item @click.native="openURL('http://launchpass.com/coloradoblockchain')">
-                <q-item-side icon="chat_bubble_outline" />
-                <q-item-main label="Riot Chat" />
-              </q-item>
-        </q-collapsible>
-
-        <q-item @click.native="openURL('http://forum.quasar-framework.org')">
-          <q-item-side icon="record_voice_over" />
-          <q-item-main label="Forum" sublabel="forum.quasar-framework.org" />
-        </q-item>
-        <q-item @click.native="openURL('https://www.youtube.com/channel/UCySU1TwgrLAU_1tF8lDt9bQ')">
-          <q-item-side icon="video_library" />
-          <q-item-main label="Media" sublabel="YouTube" />
-        </q-item>
-        <q-item @click.native="openURL('https://twitter.com/coloblockchain')">
-          <q-item-side icon="rss feed" />
-          <q-item-main label="Twitter" sublabel="@coloblockchain" />
-        </q-item>
-      </q-list>
     </q-layout-drawer>
 
     <q-page-container>
@@ -97,17 +74,75 @@
 </template>
 
 <script>
-import { openURL } from 'quasar'
+import { openURL, filter } from 'quasar'
+// import cities from 'data/co_cities.json' // TODO FIX NOT FOUND FILE???
+
+var cities = ['Denver', 'Boulder', 'Colorado Springs', 'Fort Collins']
+
+const today = new Date()
+// const { startOfDate, addToDate, subtractFromDate } = date
+
+function parseCities () {
+  return cities.map(city => {
+    return {
+      label: city,
+      // sublabel: getRandomSecondLabel(),
+      // icon: getRandomIcon(),
+      // stamp: getRandomStamp(),
+      value: city
+    }
+  })
+}
 
 export default {
   name: 'MyLayout',
   data () {
     return {
-      leftDrawerOpen: this.$q.platform.is.desktop
+      leftDrawerOpen: this.$q.platform.is.desktop,
+
+      today,
+      startDate: today,
+      endDate: null,
+
+      error: true,
+      warning: false,
+
+      cities: parseCities(),
+      cities_selected: []
+    }
+  },
+  watch: {
+    error (val) {
+      if (val) {
+        this.warning = false
+      }
+    },
+    warning (val) {
+      if (val) {
+        this.error = false
+      }
+    },
+    error2 (val) {
+      if (val) {
+        this.warning2 = false
+      }
+    },
+    warning2 (val) {
+      if (val) {
+        this.error2 = false
+      }
     }
   },
   methods: {
-    openURL
+    openURL,
+    search (terms, done) {
+      setTimeout(() => {
+        done(filter(terms, {field: 'value', list: parseCities()}))
+      }, 100)
+    },
+    duplicate (label) {
+      this.$q.notify(`"${label}" already in list`)
+    }
   }
 }
 </script>

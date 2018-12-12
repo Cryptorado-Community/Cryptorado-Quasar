@@ -47,7 +47,7 @@ import {
   CalendarAgenda
 } from 'quasar-calendar'
 
-// import eventsData from '../data/events.json' // static local data import
+// import eventsData from '../assets/events.json' // static local data import
 
 export default {
   name: 'PageIndex',
