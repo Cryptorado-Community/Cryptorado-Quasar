@@ -1,0 +1,151 @@
+<template>
+  <q-layout view="hHh Lpr lFf">
+    <q-layout-header>
+        <q-tabs class="shadow-1" animated swipeable color="tertiary" glossy align="justify">
+
+          <q-route-tab
+            label="Colorado Community Home"
+            to="/"
+            icon="home"
+            slot="title"
+          />
+          <q-route-tab
+            label="Events"
+            to="/Events"
+            icon="calendar_today"
+            slot="title"
+          />
+          <q-route-tab
+            label="Chat"
+            to="/Chat"
+            icon="people"
+            slot="title"
+          />
+          <q-route-tab
+            label="Resources"
+            to="/Resources"
+            icon="device_hub"
+            slot="title"
+          />
+
+        </q-tabs>
+
+    </q-layout-header>
+
+    <q-layout-drawer
+      v-model="leftDrawerOpen"
+      :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
+    >
+    <q-list-header>Filter</q-list-header>
+      <q-datetime
+        :value="startDate"
+        @change="val => startDate = val"
+        type="date"
+        color="green"
+        clearable
+        float-label="Start Date"
+        :max="endDate"
+      />
+      <q-datetime
+        :value="endDate"
+        @change="val => endDate = val"
+        type="date"
+        color="red"
+        clearable
+        float-label="End Date (optional)"
+        :min="startDate"
+      />
+      <q-chips-input v-model="cities_selected" placeholder="Select City" stack-label="List of Cities" @duplicate="duplicate">
+        <q-autocomplete @search="search" />
+      </q-chips-input>
+
+    </q-layout-drawer>
+
+    <q-page-container>
+
+      <router-view />
+
+      <q-page-sticky position="left" :offset="[-12, -12]">
+          <q-btn fab-mini color="red" icon="keyboard_arrow_right" class="animate-pop"   @click="leftDrawerOpen = !leftDrawerOpen" />
+      </q-page-sticky>
+
+    </q-page-container>
+  </q-layout>
+</template>
+
+<script>
+import { openURL, filter } from 'quasar'
+// import cities from 'data/co_cities.json' // TODO FIX NOT FOUND FILE???
+
+var cities = ['Denver', 'Boulder', 'Colorado Springs', 'Fort Collins']
+
+const today = new Date()
+// const { startOfDate, addToDate, subtractFromDate } = date
+
+function parseCities () {
+  return cities.map(city => {
+    return {
+      label: city,
+      // sublabel: getRandomSecondLabel(),
+      // icon: getRandomIcon(),
+      // stamp: getRandomStamp(),
+      value: city
+    }
+  })
+}
+
+export default {
+  name: 'MyLayout',
+  data () {
+    return {
+      leftDrawerOpen: this.$q.platform.is.desktop,
+
+      today,
+      startDate: today,
+      endDate: null,
+
+      error: true,
+      warning: false,
+
+      cities: parseCities(),
+      cities_selected: []
+    }
+  },
+  watch: {
+    error (val) {
+      if (val) {
+        this.warning = false
+      }
+    },
+    warning (val) {
+      if (val) {
+        this.error = false
+      }
+    },
+    error2 (val) {
+      if (val) {
+        this.warning2 = false
+      }
+    },
+    warning2 (val) {
+      if (val) {
+        this.error2 = false
+      }
+    }
+  },
+  methods: {
+    openURL,
+    search (terms, done) {
+      setTimeout(() => {
+        done(filter(terms, {field: 'value', list: parseCities()}))
+      }, 100)
+    },
+    duplicate (label) {
+      this.$q.notify(`"${label}" already in list`)
+    }
+  }
+}
+</script>
+
+<style>
+</style>
