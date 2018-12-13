@@ -3,44 +3,50 @@
 ### Live demo at: https://colorado-community-resources.github.io
 ---
 ## Goal:
-A community run and maintained website that anyone can host and contribute to. It will be the place to go to find out what is going on in the Colorado Blockchain & DLT community. Resources will be available to get connected, to learn, and to get involved in all that is going on. 
+A community run and maintained website that **anyone can host** and contribute to. It will be the place to go to find out what is going on in the Colorado Blockchain & DLT community. Resources will be available to get connected, to learn, and to get involved in all that is going on.
+
+The site aims to be _static_ and _client side only compute (or integrated API calls for distributed compute)_ to enable one to completely own and manage their own data on the site, and are _incentivized_ to host and run operations related to the site.  (see `Desired Architecture and Features` below)
 
 ## Key Content:
 
 ### An Event and Meetup Calendar
 
-**Want to take the UI and features of https://sched.com/directory**
-Thus one can easily filter and find events and meetups that fit thier interests and build a personal schedual.
+**Design: Take the UI and features of https://sched.com/directory**
+Thus one can easily filter and find events and meetups that fit their interests and build a personal schedule.
 
-- fliters:
-  - meetup name
-  - tags/types/topic (many options, possibly as many as people add to events unristricted)
-  - date range
-  - time of day
-  - location (city, possibly area/zone on map, even by venue?)
+- Filters:
+  - [ ] Meetup name
+  - [ ] Tags/types/topic (many options, possibly as many as people add to events unrestricted)
+  - [x] Date range
+  - [ ] Time of day
+  - [ ] Max Duration
+  - [x] Location (city, possibly area/zone on map, even by venue?)
   - cost
-  
-- Assemble a personal adgenda:
-  - check for conflicting times
-  - export to your calendar
-  - RSVP to organizers - link. Plug in any RSVP tool/ticketing system. Could just be an email. 
-  
+
+- Assemble a personal agenda:
+  - [ ] Check for conflicting times
+  - [ ] Export to your calendar
+  - RSVP to organizers - link. Plug in any RSVP tool/ticketing system. Could just be an email.
+
 
 - [ ] Anyone can add events
+  - [ ] **Might consider needing to run a hosting node to do so?**
+    - Need Peer ID to write to events?
+    - Need to host/serve the site on IPFS (or other DB) for events to show up?
   - [ ] Integrated form to submit any event.
-    - [PeerPad](https://ipfs.io/ipns/peerpad.net/#/) as a way to do this? 
+    - [PeerPad](https://ipfs.io/ipns/peerpad.net/#/) as a way to do this?
     - [ ] Creates an issue /pull request to the hosting repo.
     - [ ] Secondary system to allow full commit  access once approved.
 - [ ] Automatically pulls new events from a linked site - like meetup.com
 - [ ] Easy to use interface to add
 - [ ] Can subscribe to updates via email
-- [ ] linked with twitter bot to broadcast
+- [ ] Linked with twitter bot to broadcast
 - Inspiration:
       - http://getmeetingstar.com/
       - https://www.eventbrite.com/d/co--denver/events/
           - Use Cards for events vs. a calendar layout
 
-### Three Community ways to Communicate/Interact Online: 
+### Three Community ways to Communicate/Interact Online:
 
 #### Community Chat
 For short form conversation and pressing news/issues
@@ -51,13 +57,14 @@ For short form conversation and pressing news/issues
 #### Community Forum or Blog
 A long form and focused medium to talk on specific topics.
   - Redit like? Discourse like?
-  - **Reputation system like [Stack_Exchange](https://en.wikipedia.org/wiki/Stack_Exchange)** 
-(see below - almost the same framework needed for a wiki) 
+  - **Reputation system like [Stack_Exchange](https://en.wikipedia.org/wiki/Stack_Exchange)**
+(see below - almost the same framework needed for a wiki)
   - **OR** more like A blog platform? Something like [medium])(http://medium.com)?
-  
 
-#### A Community Wiki 
-For Educational / Informational content. refined ideas from Forum. 
+
+#### A Community Wiki
+
+For Educational / Informational content. refined ideas from Forum.
 - [ ] Very likely a stand alone from the website itself - just linked/integrated
 - [ ] Easy to contribute, highly navigable
 - [ ] Easy to have community moderate
@@ -77,25 +84,27 @@ For Educational / Informational content. refined ideas from Forum.
   - https://www.gitbook.com/
   - https://www.mkdocs.org/
 - Some key things to include (please add to the list :smile:):
-        - https://alternativeto.net/list/818/how-to-live-without-google
-        - Blockchain 101 links
-        - Dev resources to self-learn
-        - EFF cyber security recommendations
-        - [ethviewer.live](ethviewer.live) website and blockchian expainers
+  - https://alternativeto.net/list/818/how-to-live-without-google
+  - Blockchain 101 links
+  - Dev resources to self-learn
+  - EFF cyber security recommendations
+  - [ethviewer.live](ethviewer.live) website and blockchian expainers
 
-#### Media Highlights
-- integration with:
-  - [ ] youtube (https://www.youtube.com/channel/UCySU1TwgrLAU_1tF8lDt9bQ)
-  - [ ] twitter (TBD)
-  - [ ] medium (TBD)
-  
+#### Community Media Highlights
+- Integration with:
+  - [ ] Youtube (https://www.youtube.com/channel/UCySU1TwgrLAU_1tF8lDt9bQ)
+  - [ ] Twitter (TBD)
+  - [ ] Medium (TBD)
+
 ### A Community Resources Bulletin Board
 
 #### Project Board
-- [ ] Company Projects AND **Community Projects **
+- [ ] Company Projects AND **Community Projects**
   - [ ] What are you working on?
   - [ ] What help do you need? (jobs)
-  - [ ] **Intergate bounties**
+  - [ ] **Integrate bounties**
+    - [Gitcoin](https://gitcoin.co) bounties to dogfood this site
+    - More non-dev bounties to BUIDL the community resources - Bounties Network?
 
 
 #### Map of Cryptocurrency Accepting Businesses
@@ -107,7 +116,7 @@ For Educational / Informational content. refined ideas from Forum.
 
 ## Desired Architecture and Features:
 
-We desire a distributed content hosting and contribution model. So that the content is redundant, those using it support and validate all peers, and are able to add content to the peer network. 
+We desire a distributed content hosting and contribution model. So that the content is redundant, those using it support and validate all peers, and are able to add content to the peer network.
 
 ### Static Website
 
@@ -118,11 +127,25 @@ What does a static site model provide?
 - [ ] Flat pages as database
 - [ ] Can be tracked in a Git repo - so history is maintained and easy to host among distributed peers
 
+#### Distributed Data Base
+
+DB to hold:
+- [ ] Events
+- [ ] Meetups / Individual Homepages
+- [ ] Blog type Bulletin Board Pages
+
+
+Possible solutions for IPFS backend:
+- [OrbitDB](https://github.com/orbitdb/orbit-db) as a backend on IPFS - but is in beta.
+
+- [ ] [PeerPad](https://ipfs.io/ipns/peerpad.net/#/)  does not rely on a second or third-party. All nodes talk to each other directly, without intermediation.
+
+
 #### Easy Frontend Site Managment
 - http://quasar-framework.org
   - Full Front end Framework, headless in that sense.
   - Build on Vue and easy to use/ learn
-  - Very easy to get seomthing looking good with a lot of great components 
+  - Very easy to get seomthing looking good with a lot of great components
 
 ### Distributed Hosting / CDN:
 
@@ -132,7 +155,7 @@ An site can be hosted like this:
   - [ ] https://www.netlify.com/
     - global CDN
   - [ ] [PeerPad](https://ipfs.io/ipns/peerpad.net/#/) check out this as a model :point_left:
-    - IPNS for human named data 
+    - IPNS for human named data
     - [PeerPad](https://ipfs.io/ipns/peerpad.net/#/) as way to edit events and give write access?
 
 
@@ -145,20 +168,20 @@ Want a very easy onboarding process - just install and you are a host + node for
   - ***Make this IPFS a grain for https://sandstorm.io/***
   - And/or make a simple docker / other install for people
     - Could this be on mobile too? (needs to be lightweight enough)
-    
+
 To get started - and eventually compliment community hosing, use:
 - GitHub/Lab Pages
 - Firebase
 - Netlify
 - Other free options?
-    
+
 ##### Other self hosted resources:
 Wantt to make a set of services - keep this in mind when finding a Website hosting solution:
 - cloud shared community data
   - media
   - project Git repos
   - chat server (federeated?)
-  - wiki 
+  - wiki
 
 #### Distributed DNS:
 
@@ -168,11 +191,11 @@ An experimental peer-to-peer root DNS.
 
 ### Content Management System (CMS) for easy addition of select content
 
-Build it integrated into the site - we can use Quazar to make pages that submit to IPFS backend?
-- [ ] [PeerPad](https://ipfs.io/ipns/peerpad.net/#/)  does not rely on a second or third-party. All nodes talk to each other directly, without intermediation.
-  - [ ] Ability to Add events
-  - [ ] Blog type bulletin board
-  
+- [ ] Way that anyone can submit a PR
+  - [ ] Template file could edit and submit a PR for easily
+  - [ ] Dedicated page with forms to build an event manually and submit PR
+_This all to be ported to a permissionless model and/or Peer ID used to get write access to IPFS DB for events_
+
 Also could use CMS
 - [ ] Headless - so can use alternatives with SSG
  - https://snipcart.com/blog/react-graphql-grav-cms-headless-
@@ -183,5 +206,3 @@ Also could use CMS
     - http://gantry.org/ (grav SSG CSM)
     - WordPress
     - Drupal
-
-
