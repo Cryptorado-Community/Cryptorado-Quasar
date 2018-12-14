@@ -7,7 +7,11 @@
       </div>
       <div class="col-8">
         <strong><em>Colorado</em></strong> has one of the largest and most active <strong><em>blockchain</em></strong> communities in the world. The state is home to thought leaders and builders of these disruptive technologies. If you want to get connected with fellow entrepreneurs, investors, and developers; <strong><em>Colorado is the best place to be.</em></strong>
+<<<<<<< HEAD
         <br><br>
+=======
+        <br>
+>>>>>>> a28712f6c3a47ed8957dcf06874372dea51518dc
         We welcome everyone from the experts to the complete novice!
       </div>
     </div>
