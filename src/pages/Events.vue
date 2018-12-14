@@ -5,8 +5,17 @@
         class="full-width q-ma-sm"
       >
           <q-card-title>
-              Colorado Blockchain Community Events
+              <h5> <em>Colorado Blockchain Community Calendar</em>
+                <q-btn
+                class="float-right animate-pop"
+                color="green"
+                icon="add_box"
+                label="Add An Event"
+                to="Add_Event"
+                />
+              </h5>
           </q-card-title>
+
           <q-card-main>
               <calendar
                   :event-array="eventArray"

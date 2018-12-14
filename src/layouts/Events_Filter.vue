@@ -65,8 +65,17 @@
 
       <router-view />
 
-      <q-page-sticky position="left" :offset="[-12, -12]">
-          <q-btn fab-mini color="red" icon="keyboard_arrow_right" class="animate-pop"   @click="leftDrawerOpen = !leftDrawerOpen" />
+      <q-page-sticky
+        position="left"
+        :offset="[-14, -14]">
+          <q-btn
+          color="red"
+          size="md"
+          rounded
+          icon-right="keyboard_arrow_right"
+          class="animate-pop"
+          label="Refine"
+          @click="leftDrawerOpen = !leftDrawerOpen" />
       </q-page-sticky>
 
     </q-page-container>
@@ -98,7 +107,8 @@ export default {
   name: 'MyLayout',
   data () {
     return {
-      leftDrawerOpen: this.$q.platform.is.desktop,
+      // leftDrawerOpen: this.$q.platform.is.desktop,
+      leftDrawerOpen: false,
 
       today,
       startDate: today,
