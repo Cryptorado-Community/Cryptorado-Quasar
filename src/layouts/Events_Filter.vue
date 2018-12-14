@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh Lpr lFf">
+  <q-layout reveal view="hHh Lpr lFf">
     <q-layout-header>
         <q-tabs class="shadow-1" animated swipeable color="tertiary" glossy align="justify">
 
