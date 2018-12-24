@@ -1,155 +1,200 @@
 <template>
-  <q-page padding class="row justify-center">
-    <div style="width: 700px; max-width: 90vw;">
-      <q-stepper flat ref="stepper" v-model="step" color="primary" :alternative-labels="alt" :contractable="contractable">
-        <q-step default name="campaign" title="Campaign">
-          <p>
-            For each ad campaign that you create, you can control how much you're willing to
-            spend on clicks and conversions, which networks and geographical locations you want
-            your ads to show on, and more.
-          </p>
+  <q-page  class="justify-center">
+
+      <q-stepper
+        ref="eventSteper"
+        color="primary"
+        vertical
+      >
+        <q-step
+          default name="event_add"
+          title="Event Details"
+          subtitle="Information to help people find your event!"
+        >
+
+          These details will appear on our Website for your Event:
+
+          <q-field
+            icon="mail"
+            :count="50"
+          >
+            <q-input
+              v-model="title"
+              float-label="Event Title"
+              placeholder="Presentation night!"
+            />
+          </q-field>
+          <q-field
+            icon="people"
+            :count="10"
+            helper="Press Enter / Tap Arrow after each entry"
+          >
+            <q-chips-input
+              v-model="hosts"
+              float-label="Event Hosts"
+              placeholder="Me, Myself, and I"
+            />
+          </q-field>
+          <q-field
+            icon="gps_fixed"
+            :count="50"
+          >
+            <q-input
+              v-model="text"
+              float-label="Location"
+              placeholder="3000 Lawrence Street, Denver, CO"
+            />
+         </q-field>
+          <q-datetime
+            :value="startDate"
+            @change="val => startDate = val"
+            type="datetime"
+            color="green"
+            clearable
+            float-label="Start Date & Time"
+            :max="endDate"
+          />
+          <q-datetime
+            :value="endDate"
+            @change="val => endDate = val"
+            type="datetime"
+            color="red"
+            clearable
+            float-label="End Date & Time"
+            :min="startDate"
+          />
+          <q-field
+            icon="format_color_fill"
+            label="Choose Color"
+            helper="Calendar items will fill with this color"
+          >
+            <q-color
+              v-model="color"
+              color="primary"
+              float-label="Color"
+            />
+          </q-field>
+
+          <q-stepper-navigation>
+            <q-btn class="q-ml-sm" color="primary" @click="$refs.eventSteper.next()">Continue</q-btn>
+          </q-stepper-navigation>
+        </q-step>
+
+        <q-step name="ad_group"  title="Event Description" subtitle="The Body of Your Event">
 
           <q-stepper-navigation >
-            <q-btn color="primary" @click="$refs.stepper.goToStep('create_ad')">Create ad now</q-btn>
-            <q-btn class="q-ml-sm" color="primary" @click="$refs.stepper.next()">Continue</q-btn>
+            <q-btn class="q-ml-sm" color="secondary" @click="$refs.eventSteper.previous()">Back</q-btn>
+          </q-stepper-navigation>
+
+            <q-editor
+              v-model="bodyText"
+              :toolbar="[
+                ['bold', 'italic', 'strike', 'underline', 'subscript', 'superscript'],
+                ['token', 'hr', 'link', 'custom_btn'],
+                ['print', 'fullscreen'],
+                [
+                  {
+                    label: $q.i18n.editor.formatting,
+                    icon: $q.icon.editor.formatting,
+                    list: 'no-icons',
+                    options: ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'code']
+                  },
+                  {
+                    label: $q.i18n.editor.fontSize,
+                    icon: $q.icon.editor.fontSize,
+                    fixedLabel: true,
+                    fixedIcon: true,
+                    list: 'no-icons',
+                    options: ['size-1', 'size-2', 'size-3', 'size-4', 'size-5', 'size-6', 'size-7']
+                  },
+                  {
+                    label: $q.i18n.editor.defaultFont,
+                    icon: $q.icon.editor.font,
+                    fixedIcon: true,
+                    list: 'no-icons',
+                    options: ['default_font', 'arial', 'arial_black', 'comic_sans', 'courier_new', 'impact', 'lucida_grande', 'times_new_roman', 'verdana']
+                  },
+                  'removeFormat'
+                ],
+                ['quote', 'unordered', 'ordered', 'outdent', 'indent'],
+                [
+                  {
+                    label: $q.i18n.editor.align,
+                    icon: $q.icon.editor.align,
+                    fixedLabel: true,
+                    list: 'only-icons',
+                    options: ['left', 'center', 'right', 'justify']
+                  },
+                  {
+                    label: $q.i18n.editor.align,
+                    icon: $q.icon.editor.align,
+                    fixedLabel: true,
+                    options: ['left', 'center', 'right', 'justify']
+                  }
+                ],
+                ['undo', 'redo']
+              ]"
+            :fonts="{
+              arial: 'Arial',
+              arial_black: 'Arial Black',
+              comic_sans: 'Comic Sans MS',
+              courier_new: 'Courier New',
+              impact: 'Impact',
+              lucida_grande: 'Lucida Grande',
+              times_new_roman: 'Times New Roman',
+              verdana: 'Verdana'
+            }"
+      />
+
+          <q-stepper-navigation>
+            <q-btn color="primary" @click="$refs.eventSteper.next()">Continue</q-btn>
           </q-stepper-navigation>
         </q-step>
 
-        <q-step name="ad_group" :error="stepError" title="Ad Groups" subtitle="Create some">
-          <p>An ad group contains one or more ads which target a shared set of keywords.</p>
-
-          <q-stepper-navigation v-if="!globalNavigation">
-            <q-btn color="primary" @click="$refs.stepper.next()">Continue</q-btn>
-            <q-btn class="q-ml-sm" color="primary" flat @click="$refs.stepper.previous()">Back</q-btn>
+        <q-step name="finalize" title="Submit" subtitle="Preview Submit Your Event">
+          <q-stepper-navigation>
+            <q-btn class="q-ml-sm" color="secondary" @click="$refs.eventSteper.previous()">Back</q-btn>
           </q-stepper-navigation>
-        </q-step>
 
-        <q-step name="disabled_step" :disable="disabledStep" icon="attach_money" title="Payment">
           <p>
-            Try out different payment schemes for your customers, and learn how
-            to enhance payments using extensions.
+            TODO: ADD A PREVIEW AND FINISH <br>
+            Also add export page funtion! <br>
+            Add IPFS pin function? Part of submit?
           </p>
+          <q-btn class="q-ml-sm" icon-right="cloud_download" color="blue" @click="fileExport">Export HTML file</q-btn>
 
-          <q-stepper-navigation v-if="!globalNavigation">
-            <q-btn color="primary" @click="$refs.stepper.next()">Continue</q-btn>
-            <q-btn class="q-ml-sm" color="primary" flat @click="$refs.stepper.previous()">Back</q-btn>
-          </q-stepper-navigation>
-        </q-step>
-
-        <q-step name="create_ad" title="Create an ad">
-          <p>
-            Try out different ad text to see what brings in the most customers, and learn how
-            to enhance your ads using features like ad extensions. If you run into any problems
-            with your ads, find out how to tell if they're running and how to resolve approval
-            issues.
-          </p>
-
-          <q-stepper-navigation v-if="!globalNavigation">
-            <q-btn color="primary" @click="$refs.stepper.goToStep('campaign')">Restart</q-btn>
-            <q-btn class="q-ml-sm" color="primary" flat @click="$refs.stepper.previous()">Back</q-btn>
-          </q-stepper-navigation>
-        </q-step>
-
-        <q-stepper-navigation v-if="globalNavigation">
-          <q-btn
-            v-if="step !== 'campaign'"
-            color="primary"
-            flat
-            @click="$refs.stepper.previous()"
-          >
-            Back
-          </q-btn>
-
-          <q-btn class="q-ml-sm" color="primary" @click="$refs.stepper.next()">
-            {{ step === 'create_ad' ? 'Finalize' : 'Next' }}
-          </q-btn>
-        </q-stepper-navigation>
-
-        <q-inner-loading :visible="progress" />
-      </q-stepper>
-
-      <p class="caption">Vertical Stepper</p>
-
-      <q-stepper ref="stepper2" color="secondary" v-model="step2" :alternative-labels="alt" vertical>
-        <q-step default name="campaign" title="Campaign">
-          <p>
-            For each ad campaign that you create, you can control how much you're willing to
-            spend on clicks and conversions, which networks and geographical locations you want
-            your ads to show on, and more.
-          </p>
-
-          <q-stepper-navigation v-if="!globalNavigation">
-            <q-btn color="primary" @click="$refs.stepper2.goToStep('disabled_step')">I want to pay</q-btn>
-            <q-btn class="q-ml-sm" color="secondary" @click="$refs.stepper2.next()">Continue</q-btn>
-          </q-stepper-navigation>
-        </q-step>
-
-        <q-step name="ad_group" :error="stepError" title="Ad Groups" subtitle="Create some">
-          <p>An ad group contains one or more ads which target a shared set of keywords.</p>
-
-          <q-stepper-navigation v-if="!globalNavigation">
-            <q-btn color="secondary" @click="$refs.stepper2.next()">Continue</q-btn>
-            <q-btn class="q-ml-sm" color="secondary" flat @click="$refs.stepper2.previous()">Back</q-btn>
-          </q-stepper-navigation>
-        </q-step>
-
-        <q-step name="disabled_step" :disable="disabledStep" icon="attach_money" title="Payment">
-          <p>
-            Try out different payment schemes for your customers, and learn how
-            to enhance payments using extensions.
-          </p>
-
-          <q-stepper-navigation v-if="!globalNavigation">
-            <q-btn color="secondary" @click="$refs.stepper2.next()">Continue</q-btn>
-            <q-btn class="q-ml-sm" color="secondary" flat @click="$refs.stepper2.previous()">Back</q-btn>
-          </q-stepper-navigation>
-        </q-step>
-
-        <q-step name="create_ad" title="Create an ad">
-          <p>
-            Try out different ad text to see what brings in the most customers, and learn how
-            to enhance your ads using features like ad extensions. If you run into any problems
-            with your ads, find out how to tell if they're running and how to resolve approval
-            issues.
-          </p>
-
-          <q-stepper-navigation v-if="!globalNavigation">
-            <q-btn color="secondary" @click="$refs.stepper2.goToStep('campaign')">Restart</q-btn>
-            <q-btn class="q-ml-sm" color="secondary" flat @click="$refs.stepper2.previous()">Back</q-btn>
+          <q-stepper-navigation>
+            <q-btn color="secondary" @click="$refs.eventSteper.goToStep('event_add')">Back to Top</q-btn>
+            <q-btn class="q-ml-sm" color="green" @click="submit">Finish</q-btn>
           </q-stepper-navigation>
         </q-step>
 
         <q-inner-loading :visible="progress" />
       </q-stepper>
 
-    </div>
   </q-page>
 </template>
 
 <script>
+
+const today = new Date()
+
 export default {
   data () {
     return {
-      step: 'first',
-      step2: 'first',
-      options: ['contractable', 'disable_payment', 'step_error']
+      title: '',
+      hosts: [],
+      startDate: today,
+      endDate: null,
+      color: null,
+      location: null,
+      bodyText: '<h3>Header 3</h3><div>Normal text; <b>bold</b>; <i>italic</i>; <strike>strike-trough</strike>; <u style="font-weight: bold; font-style: italic;">bold, italic and underline</u>;</div><div><u>A <i style="font-weight: bold;">mo</i>re <i style="font-weight: bold;">com</i>plica</u>ted example.</div><div><br></div><div>Link to <a href="http://quasar-framework.org">Quasar Documentation</a></div><div><font face="Courier New">Using "Courier New" font.</font></div><div><ul><li>Vue</li><li>Webpack</li></ul><ol><li>Website</li><li>App</li><ol><li>Mobile (Cordova)</li><li>Electron</li></ol></ol><div style="text-align: center;">Center aligned text</div></div><div style="text-align: right;">Right aligned</div>',
+      options: ['step_error', 'progress']
     }
   },
   computed: {
-    alt () {
-      return this.options.includes('alt')
-    },
-    contractable () {
-      return this.options.includes('contractable')
-    },
-    globalNavigation () {
-      return this.options.includes('global_navigation')
-    },
     stepError () {
       return this.options.includes('step_error')
-    },
-    disabledStep () {
-      return this.options.includes('disable_payment')
     },
     progress () {
       return this.options.includes('progress')

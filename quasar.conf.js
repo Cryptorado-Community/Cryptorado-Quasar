@@ -42,6 +42,10 @@ module.exports = function (ctx) {
     // framework: 'all' --- includes everything; for dev only!
     framework: {
       components: [
+        'QEditor',
+        'QInput',
+        'QField',
+        'QColor',
         'QSearch',
         'QChipsInput',
         'QAutocomplete',
