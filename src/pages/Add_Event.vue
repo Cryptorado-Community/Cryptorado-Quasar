@@ -40,7 +40,7 @@
             :count="50"
           >
             <q-input
-              v-model="text"
+              v-model="loca"
               float-label="Location"
               placeholder="3000 Lawrence Street, Denver, CO"
             />
@@ -187,7 +187,7 @@ export default {
       startDate: today,
       endDate: null,
       color: null,
-      location: null,
+      loca: null,
       bodyText: '<h3>Header 3</h3><div>Normal text; <b>bold</b>; <i>italic</i>; <strike>strike-trough</strike>; <u style="font-weight: bold; font-style: italic;">bold, italic and underline</u>;</div><div><u>A <i style="font-weight: bold;">mo</i>re <i style="font-weight: bold;">com</i>plica</u>ted example.</div><div><br></div><div>Link to <a href="http://quasar-framework.org">Quasar Documentation</a></div><div><font face="Courier New">Using "Courier New" font.</font></div><div><ul><li>Vue</li><li>Webpack</li></ul><ol><li>Website</li><li>App</li><ol><li>Mobile (Cordova)</li><li>Electron</li></ol></ol><div style="text-align: center;">Center aligned text</div></div><div style="text-align: right;">Right aligned</div>',
       options: ['step_error', 'progress']
     }

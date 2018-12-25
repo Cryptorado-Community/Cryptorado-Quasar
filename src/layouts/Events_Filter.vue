@@ -36,7 +36,7 @@
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
-    <q-list-header>Filter</q-list-header>
+    <q-list-header>Find The Best Events:</q-list-header>
       <q-datetime
         :value="startDate"
         @change="val => startDate = val"
@@ -55,7 +55,12 @@
         float-label="End Date (optional)"
         :min="startDate"
       />
-      <q-chips-input v-model="cities_selected" placeholder="Select City" stack-label="List of Cities" @duplicate="duplicate">
+      <q-chips-input
+        v-model="cities_selected"
+        placeholder="Select One or More..."
+        float-label="City"
+        @duplicate="duplicate"
+        >
         <q-autocomplete @search="search" />
       </q-chips-input>
 
@@ -67,14 +72,13 @@
 
       <q-page-sticky
         position="left"
-        :offset="[-14, -14]">
+        :offset="[-20, -20]">
           <q-btn
           color="red"
           size="md"
           rounded
-          icon-right="keyboard_arrow_right"
+          icon-right="find_in_page"
           class="animate-pop"
-          label="Refine"
           @click="leftDrawerOpen = !leftDrawerOpen" />
       </q-page-sticky>
 
@@ -84,24 +88,18 @@
 
 <script>
 import { openURL, filter } from 'quasar'
-// import cities from 'data/co_cities.json' // TODO FIX NOT FOUND FILE???
 
-var cities = ['Denver', 'Boulder', 'Colorado Springs', 'Fort Collins']
-
-const today = new Date()
-// const { startOfDate, addToDate, subtractFromDate } = date
-
+import cities from './../data/co_cities.json'
 function parseCities () {
   return cities.map(city => {
     return {
       label: city,
-      // sublabel: getRandomSecondLabel(),
-      // icon: getRandomIcon(),
-      // stamp: getRandomStamp(),
       value: city
     }
   })
 }
+
+const today = new Date()
 
 export default {
   name: 'MyLayout',
