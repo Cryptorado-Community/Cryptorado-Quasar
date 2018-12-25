@@ -15,7 +15,7 @@
           These details will appear on our Website for your Event:
 
           <q-field
-            icon="mail"
+            icon="public"
             :count="50"
           >
             <q-input
@@ -76,16 +76,17 @@
           </q-field>
 
           <q-stepper-navigation>
-            <q-btn class="q-ml-sm" color="primary" @click="$refs.eventSteper.next()">Continue</q-btn>
+            <q-btn class="q-ml-sm" color="primary" icon-right="keyboard_arrow_down" @click="$refs.eventSteper.next()">Continue</q-btn>
           </q-stepper-navigation>
         </q-step>
 
         <q-step name="ad_group"  title="Event Description" subtitle="The Body of Your Event">
 
           <q-stepper-navigation >
-            <q-btn class="q-ml-sm" color="secondary" @click="$refs.eventSteper.previous()">Back</q-btn>
+            <q-btn class="q-ml-sm" color="secondary" icon-right="keyboard_arrow_up" @click="$refs.eventSteper.previous()">Back</q-btn>
           </q-stepper-navigation>
-
+          <strong>Note:</strong> Your page banner is generated for you - this is just the body text
+          <br><br>
             <q-editor
               v-model="bodyText"
               :toolbar="[
@@ -134,26 +135,26 @@
                 ],
                 ['undo', 'redo']
               ]"
-            :fonts="{
-              arial: 'Arial',
-              arial_black: 'Arial Black',
-              comic_sans: 'Comic Sans MS',
-              courier_new: 'Courier New',
-              impact: 'Impact',
-              lucida_grande: 'Lucida Grande',
-              times_new_roman: 'Times New Roman',
-              verdana: 'Verdana'
-            }"
-      />
-
+              :fonts="{
+                arial: 'Arial',
+                arial_black: 'Arial Black',
+                comic_sans: 'Comic Sans MS',
+                courier_new: 'Courier New',
+                impact: 'Impact',
+                lucida_grande: 'Lucida Grande',
+                times_new_roman: 'Times New Roman',
+                verdana: 'Verdana'
+              }"
+            />
+      <br>
           <q-stepper-navigation>
-            <q-btn color="primary" @click="$refs.eventSteper.next()">Continue</q-btn>
+            <q-btn color="primary" icon-right="keyboard_arrow_down" @click="$refs.eventSteper.next()">Continue</q-btn>
           </q-stepper-navigation>
         </q-step>
 
         <q-step name="finalize" title="Submit" subtitle="Preview Submit Your Event">
           <q-stepper-navigation>
-            <q-btn class="q-ml-sm" color="secondary" @click="$refs.eventSteper.previous()">Back</q-btn>
+            <q-btn class="q-ml-sm" color="secondary" icon-right="keyboard_arrow_up" @click="$refs.eventSteper.previous()">Back</q-btn>
           </q-stepper-navigation>
 
           <p>
@@ -161,11 +162,11 @@
             Also add export page funtion! <br>
             Add IPFS pin function? Part of submit?
           </p>
-          <q-btn class="q-ml-sm" icon-right="cloud_download" color="blue" @click="fileExport">Export HTML file</q-btn>
+          <q-btn class="q-ml-sm" icon-right="save_alt" color="blue" @click="fileExport">Save HTML</q-btn>
 
           <q-stepper-navigation>
-            <q-btn color="secondary" @click="$refs.eventSteper.goToStep('event_add')">Back to Top</q-btn>
-            <q-btn class="q-ml-sm" color="green" @click="submit">Finish</q-btn>
+            <q-btn color="secondary" icon="publish" @click="$refs.eventSteper.goToStep('event_add')">Back to Top</q-btn>
+            <q-btn icon-right="send" class="q-ml-sm" color="green" @click="submit">Submit</q-btn>
           </q-stepper-navigation>
         </q-step>
 

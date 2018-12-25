@@ -5,22 +5,15 @@
       link
       inset-delimiter
     >
-      <q-item to='/Events'>
-        <q-item-side icon="calendar_today" />
-        <q-item-main label="Events" sublabel="Calendar"/>
-      </q-item>
 
       <q-item @click.native="openURL('http://quasar-framework.org')">
         <q-item-side icon="people" />
-        <q-item-main label="Meetups" sublabel="Listing" />
+        <q-item-main label="Meetups" sublabel="Listing by our Community" />
       </q-item>
 
       <q-collapsible
-              v-model="open"
-              icon="chat"
-              label="Community Chat"
-              @show="notify('Opened a Collapsible')"
-              @hide="notify('Closed a Collapsible', true)"
+              icon="record_voice_over"
+              label="Talk"
             >
             <q-item @click.native="openURL('http://launchpass.com/coloradoblockchain')">
               <q-item-side icon="chat_bubble_outline" />
@@ -33,7 +26,7 @@
       </q-collapsible>
 
       <q-item @click.native="openURL('http://forum.quasar-framework.org')">
-        <q-item-side icon="record_voice_over" />
+        <q-item-side icon="forum" />
         <q-item-main label="Forum" sublabel="forum.quasar-framework.org" />
       </q-item>
       <q-item @click.native="openURL('https://www.youtube.com/channel/UCySU1TwgrLAU_1tF8lDt9bQ')">
@@ -46,11 +39,8 @@
       </q-item>
     </q-list>
     <q-collapsible
-            v-model="open"
             icon="chat"
             label="Community Resources"
-            @show="notify('Opened a Collapsible')"
-            @hide="notify('Closed a Collapsible', true)"
           >
           <q-item @click.native="openURL('https://coinmap.org/#/map/39.76442532/-104.85478670/11')">
             <q-item-side icon="map" />
@@ -71,7 +61,6 @@
 import { openURL } from 'quasar'
 
 export default {
-  // name: 'PageName',
   methods: {
     openURL
   }
