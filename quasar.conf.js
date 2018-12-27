@@ -35,8 +35,8 @@ module.exports = function (ctx) {
       }
     },
     devServer: {
-      // https: true,
-      // port: 8080,
+      https: true,
+      port: 4242,
       open: true // opens browser window automatically
     },
     // framework: 'all' --- includes everything; for dev only!
@@ -93,39 +93,50 @@ module.exports = function (ctx) {
       // workboxPluginMode: 'InjectManifest',
       // workboxOptions: {},
       manifest: {
-        // name: 'Quasar App',
-        // short_name: 'Quasar-PWA',
-        // description: 'Best PWA App in town!',
+        name: 'Colorado Blockchain Home',
+        short_name: 'COBC-Home',
+        description: 'Building a Colorado Blockchain Community',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
         theme_color: '#027be3',
-        icons: [
-          {
-            'src': 'statics/icons/icon-128x128.png',
-            'sizes': '128x128',
-            'type': 'image/png'
-          },
-          {
-            'src': 'statics/icons/icon-192x192.png',
-            'sizes': '192x192',
-            'type': 'image/png'
-          },
-          {
-            'src': 'statics/icons/icon-256x256.png',
-            'sizes': '256x256',
-            'type': 'image/png'
-          },
-          {
-            'src': 'statics/icons/icon-384x384.png',
-            'sizes': '384x384',
-            'type': 'image/png'
-          },
-          {
-            'src': 'statics/icons/icon-512x512.png',
-            'sizes': '512x512',
-            'type': 'image/png'
-          }
+        "icons": [
+         {
+          "src": "\/android-icon-36x36.png",
+          "sizes": "36x36",
+          "type": "image\/png",
+          "density": "0.75"
+         },
+         {
+          "src": "\/android-icon-48x48.png",
+          "sizes": "48x48",
+          "type": "image\/png",
+          "density": "1.0"
+         },
+         {
+          "src": "\/android-icon-72x72.png",
+          "sizes": "72x72",
+          "type": "image\/png",
+          "density": "1.5"
+         },
+         {
+          "src": "\/android-icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image\/png",
+          "density": "2.0"
+         },
+         {
+          "src": "\/android-icon-144x144.png",
+          "sizes": "144x144",
+          "type": "image\/png",
+          "density": "3.0"
+         },
+         {
+          "src": "\/android-icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image\/png",
+          "density": "4.0"
+         }
         ]
       }
     },

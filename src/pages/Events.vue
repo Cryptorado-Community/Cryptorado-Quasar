@@ -11,7 +11,7 @@
                 color="green"
                 icon="add_box"
                 label="Add An Event"
-                to="Add_Event"
+                to="Events/Add_Event"
                 />
               </h5>
           </q-card-title>
