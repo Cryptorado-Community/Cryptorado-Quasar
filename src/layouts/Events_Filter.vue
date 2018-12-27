@@ -36,7 +36,9 @@
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
+
     <q-list-header>Find The Best Events:</q-list-header>
+
       <q-datetime
         :value="startDate"
         @change="val => startDate = val"
@@ -46,6 +48,7 @@
         float-label="Start Date"
         :max="endDate"
       />
+
       <q-datetime
         :value="endDate"
         @change="val => endDate = val"
@@ -55,13 +58,30 @@
         float-label="End Date (optional)"
         :min="startDate"
       />
+
       <q-chips-input
         v-model="cities_selected"
-        placeholder="Select One or More..."
+        placeholder="Type to search, Enter One or More..."
         float-label="City"
         @duplicate="duplicate"
         >
-        <q-autocomplete @search="search" />
+          <q-autocomplete
+            :static-data="{field: 'value', list: cities}"
+            :min-characters="1"
+          />
+      </q-chips-input>
+
+      <q-chips-input
+        v-model="tags_selected"
+        placeholder="Type to search, Enter One or More..."
+        float-label="Tags"
+        @duplicate="duplicate"
+        >
+          <q-autocomplete
+            :static-data="{field: 'value', list: tags}"
+            :min-characters="0"
+            @search="search"
+          />
       </q-chips-input>
 
     </q-layout-drawer>
@@ -87,14 +107,16 @@
 </template>
 
 <script>
-import { openURL, filter } from 'quasar'
+import { openURL } from 'quasar'
 
 import cities from './../data/co_cities.json'
-function parseCities () {
-  return cities.map(city => {
+import tags from './../data/tags.json'
+
+function parseList (items) {
+  return items.map(item => {
     return {
-      label: city,
-      value: city
+      label: item,
+      value: item
     }
   })
 }
@@ -115,8 +137,10 @@ export default {
       error: true,
       warning: false,
 
-      cities: parseCities(),
-      cities_selected: []
+      cities: parseList(cities),
+      tags: parseList(tags),
+      cities_selected: [],
+      tags_selected: []
     }
   },
   watch: {
@@ -143,11 +167,6 @@ export default {
   },
   methods: {
     openURL,
-    search (terms, done) {
-      setTimeout(() => {
-        done(filter(terms, {field: 'value', list: parseCities()}))
-      }, 100)
-    },
     duplicate (label) {
       this.$q.notify(`"${label}" already in list`)
     }
