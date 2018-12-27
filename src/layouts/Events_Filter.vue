@@ -67,7 +67,7 @@
         >
           <q-autocomplete
             :static-data="{field: 'value', list: cities}"
-            :min-characters="1"
+            :min-characters="0"
           />
       </q-chips-input>
 
