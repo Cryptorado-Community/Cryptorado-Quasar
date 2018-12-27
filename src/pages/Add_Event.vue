@@ -45,7 +45,12 @@
               placeholder="3000 Lawrence Street, Denver, CO"
             />
          </q-field>
+         <q-field
+           icon="event"
+           :count="50"
+         >
           <q-datetime
+
             :value="startDate"
             @change="val => startDate = val"
             type="datetime"
@@ -63,17 +68,18 @@
             float-label="End Date & Time"
             :min="startDate"
           />
+        </q-field>
+
           <q-field
             icon="format_color_fill"
-            label="Choose Color"
             helper="Calendar items will fill with this color"
           >
-            <q-color
+            <q-input
               v-model="color"
-              color="primary"
               float-label="Color"
+              placeholder="<Hex value>"
             />
-          </q-field>
+         </q-field>
 
           <q-stepper-navigation>
             <q-btn class="q-ml-sm" color="primary" icon-right="keyboard_arrow_down" @click="$refs.eventSteper.next()">Continue</q-btn>
@@ -162,6 +168,44 @@
             Also add export page funtion! <br>
             Add IPFS pin function? Part of submit?
           </p>
+
+          <q-card inline class="q-ma-sm">
+            <q-card-media style="height: 250px;">
+              <img src="statics/cobc_logo.jpg" style="max-height:100%;">
+
+              <q-card-title slot="overlay">
+                <h3 style="margin: 0px 0px;">{{title}}</h3>
+              </q-card-title>
+            </q-card-media>
+
+            <div style="transform: translateY(-10%);">
+              <q-btn fab color="green" icon="add" class="relative" style="top: 0; left: 85%; transform: translateY(15%);" />
+              <q-field
+                icon="place"
+                class="text-faded"
+              >
+              {{loca}}
+              </q-field>
+              <q-field
+                icon="event"
+                class="text-faded"
+              >
+              {{displayDate(startDate)}} to {{displayDate(endDate)}}
+              </q-field>
+              <h5 style="margin: 0px 10px;" class="text-faded">Hosted by: <template v-for="host in hosts" >{{host}} </template>
+              </h5>
+              <q-card-separator />
+
+              <q-card-main>
+                <div v-html="bodyText"> </div>
+              </q-card-main>
+
+              <!-- <q-card-separator />
+
+              <q-btn class="q-ml-sm" icon-right="mail" color="green" @click="rsvp">RSVP</q-btn> -->
+            </div>
+          </q-card>
+
           <q-btn class="q-ml-sm" icon-right="save_alt" color="blue" @click="fileExport">Save HTML</q-btn>
 
           <q-stepper-navigation>
@@ -177,19 +221,21 @@
 </template>
 
 <script>
+import { date } from 'quasar'
 
 const today = new Date()
 
 export default {
   data () {
     return {
-      title: '',
-      hosts: [],
+      title: 'Title',
+      hosts: ['Your Meetup', 'Your Organizer'],
       startDate: today,
-      endDate: null,
-      color: null,
-      loca: null,
+      endDate: today,
+      color: '#2069BD',
+      loca: 'Location',
       bodyText: '<h3>Header 3</h3><div>Normal text; <b>bold</b>; <i>italic</i>; <strike>strike-trough</strike>; <u style="font-weight: bold; font-style: italic;">bold, italic and underline</u>;</div><div><u>A <i style="font-weight: bold;">mo</i>re <i style="font-weight: bold;">com</i>plica</u>ted example.</div><div><br></div><div>Link to <a href="http://quasar-framework.org">Quasar Documentation</a></div><div><font face="Courier New">Using "Courier New" font.</font></div><div><ul><li>Vue</li><li>Webpack</li></ul><ol><li>Website</li><li>App</li><ol><li>Mobile (Cordova)</li><li>Electron</li></ol></ol><div style="text-align: center;">Center aligned text</div></div><div style="text-align: right;">Right aligned</div>',
+      months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
       options: ['step_error', 'progress']
     }
   },
@@ -199,6 +245,12 @@ export default {
     },
     progress () {
       return this.options.includes('progress')
+    }
+  },
+  methods: {
+    displayDate (dateIn) {
+      let st = date.formatDate(dateIn, 'MM/DD -HH:mm')
+      return st
     }
   }
 }
