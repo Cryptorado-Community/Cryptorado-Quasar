@@ -16,18 +16,29 @@ Thus one can easily filter and find events and meetups that fit their interests 
 
 - Filters:
   - [ ] Meetup name
-  - [ ] Tags/types/topic (many options, possibly as many as people add to events unrestricted)
+  - [x] Tags/types/topic (many options, possibly as many as people add to events unrestricted)
   - [x] Date range
-  - [ ] Time of day
-  - [ ] Max Duration
+  - [x] Time of day
+  - [x] Max Duration
   - [x] Location (city, possibly area/zone on map, even by venue?)
   - cost
 
-- Assemble a personal agenda:
+- Assemble a personal agenda (NO LOGIN NEEDED):
+  - [ ] Local storage of selected items
+    - Cookie to hold this accross sessions?  
+  - [ ] Click to add/remove to local storage
   - [ ] Check for conflicting times
+    - [ ] Page to resolve conflicts
+  - [ ] Exportable file (ical?)
+  - [ ] Link to add/export to common callender applications
   - [ ] Export to your calendar
-  - RSVP to organizers - link. Plug in any RSVP tool/ticketing system. Could just be an email.
 
+- RSVP to organizers 
+  - [ ] External link (if hosted on other platform)
+    - Plug in any RSVP tool/ticketing system.
+    - Just be an email if no other platform hosts RSVPs (?)
+
+***Desired Features:***
 
 - [ ] Anyone can add events
   - [ ] **Might consider needing to run a hosting node to do so?**
