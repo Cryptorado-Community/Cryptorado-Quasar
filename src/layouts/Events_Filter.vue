@@ -4,23 +4,28 @@
         <q-tabs class="shadow-1" animated swipeable color="tertiary" glossy align="justify">
 
           <q-route-tab
-            label="Colorado Community Home"
             to="/"
-            icon="home"
+            name="home"
             slot="title"
-          />
+            style="padding: 5px 5px"
+          >
+            <img src="~/assets/cobc_white_text.png" style="height: 70px" alt="Home">
+          </q-route-tab>
+
           <q-route-tab
             label="Events"
             to="/Events"
             icon="calendar_today"
             slot="title"
           />
+
           <q-route-tab
             label="Chat"
             to="/Chat"
             icon="people"
             slot="title"
           />
+
           <q-route-tab
             label="Resources"
             to="/Resources"
