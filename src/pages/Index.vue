@@ -1,15 +1,10 @@
 <template>
-  <q-page>
-    <div style="
-      position: fixed;
-      z-index: -99;
-      width: 500%;
-      height: 100%;
-      transform: translateX(-65%) translateY(-10%);
-      overflow: hidden;
-    ">
+  <q-page class="bk-alt">
+    <div class="video_bk">
       <iframe
-        frameborder="0" height="110%" width="150%" style=" overflow-x: hidden"
+        frameborder="0"
+        height="110%"
+        width="150%"
         src="https://www.youtube.com/embed/gkf_tMj9NCM?modestbranding=0&loop=1&showinfo=0&iv_load_policy=3&autoplay=1&controls=0&start=7&mute=1&playlist=gkf_tMj9NCM"
        ></iframe>
     </div>
@@ -35,4 +30,20 @@ export default {
 </script>
 
 <style>
+.bk-alt{
+  background: url('../statics/denver-skyline.jpg');
+  z-index: -99;
+  background-size: 100% contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.video_bk{
+    position: fixed;
+    z-index: -98;
+    width: 500%;
+    height: 100%;
+    transform: translateX(-65%) translateY(-10%);
+    overflow: hidden;
+}
 </style>
