@@ -19,9 +19,10 @@
             :count="50"
           >
             <q-input
-              v-model="title"
+              placeholder="Title Goes Here"
               float-label="Event Title"
-              placeholder="Presentation night!"
+              v-model="title"
+              clearable
             />
           </q-field>
           <q-field
@@ -30,9 +31,10 @@
             helper="Press Enter / Tap Arrow after each entry"
           >
             <q-chips-input
-              v-model="hosts"
               float-label="Event Hosts"
-              placeholder="Me, Myself, and I"
+              placeholder="Your name and/or Your meetup or Anonymous"
+              v-model="hosts"
+              clearable
             />
           </q-field>
           <q-field
@@ -40,9 +42,11 @@
             :count="50"
           >
             <q-input
-              v-model="loca"
               float-label="Location"
-              placeholder="3000 Lawrence Street, Denver, CO"
+              placeholder="Your Event Address"
+              v-model="loca"
+              clearable
+              clear-value="TBD"
             />
          </q-field>
          <q-field
@@ -50,22 +54,21 @@
            :count="50"
          >
           <q-datetime
-
+            float-label="Start Date & Time"
             :value="startDate"
             @change="val => startDate = val"
             type="datetime"
             color="green"
             clearable
-            float-label="Start Date & Time"
             :max="endDate"
           />
           <q-datetime
+            float-label="End Date & Time"
             :value="endDate"
             @change="val => endDate = val"
             type="datetime"
             color="red"
             clearable
-            float-label="End Date & Time"
             :min="startDate"
           />
         </q-field>
@@ -74,10 +77,14 @@
             icon="format_color_fill"
             helper="Calendar items will fill with this color"
           >
-            <q-input
+            <q-color
+              :style="{
+                 'background-color': color,
+                 'border-radius': '4px'
+                 }"
               v-model="color"
-              float-label="Color"
-              placeholder="<Hex value>"
+              clearable
+              clear-value="#2069BD"
             />
          </q-field>
 

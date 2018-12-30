@@ -50,11 +50,8 @@ module.exports = function (ctx) {
         'QCardSeparator',
         'QCardActions',
         'QEditor',
-        'QInput',
-        'QField',
         'QColor',
         'QSearch',
-        'QChipsInput',
         'QAutocomplete',
         'QDatetime',
         'QPageSticky',
@@ -79,7 +76,10 @@ module.exports = function (ctx) {
         'QListHeader',
         'QItem',
         'QItemMain',
-        'QItemSide'
+        'QItemSide',
+        'QInput',
+        'QField',
+        'QChipsInput'
       ],
       directives: [
         'Ripple'
