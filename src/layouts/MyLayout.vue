@@ -7,7 +7,6 @@
             to="/"
             name="home"
             slot="title"
-            style="padding: 5px 5px"
           >
             <img src="~/assets/cobc_white_text.png" style="height: 70px" alt="Home">
           </q-route-tab>
@@ -57,4 +56,7 @@ export default {
 </script>
 
 <style>
+.q-tab{
+  padding: 0px;
+}
 </style>
