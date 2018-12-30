@@ -37,9 +37,11 @@
               clearable
             />
           </q-field>
+
           <q-field
             icon="gps_fixed"
             :count="50"
+            class="q-mt-sm"
           >
             <q-input
               float-label="Location"
@@ -73,9 +75,21 @@
           />
         </q-field>
 
+        <q-field
+          icon="group_add"
+        >
+          <q-input
+            placeholder="Empty = Unlimited / No Max"
+            float-label="Max RSVP Count"
+            v-model="rsvpMax"
+            clearable
+          />
+      </q-field>
+
           <q-field
             icon="format_color_fill"
             helper="Calendar items will fill with this color"
+            class="q-mt-sm"
           >
             <q-color
               :style="{
@@ -170,15 +184,14 @@
             <q-btn class="q-ml-sm" color="secondary" icon-right="keyboard_arrow_up" @click="$refs.eventSteper.previous()">Back</q-btn>
           </q-stepper-navigation>
 
-          <p>
-            TODO: ADD A PREVIEW AND FINISH <br>
-            Also add export page funtion! <br>
-            Add IPFS pin function? Part of submit?
-          </p>
-
-          <q-card inline class="q-ma-sm">
+<!-- card to export  -->
+      <div class="row items-center justify-around">
+        <div class="q-my-md col-10 col-md-6">
+          <q-card class="q-ma-sm">
             <q-card-media style="height: 250px;">
-              <img src="statics/cobc_logo.jpg" style="max-height:100%;">
+              <img src="statics/cobc_logo.jpg"
+                  style="max-height:100%;object-fit: contain;"
+              >
 
               <q-card-title slot="overlay">
                 <h3 style="margin: 0px 0px;">{{title}}</h3>
@@ -212,8 +225,11 @@
               <q-btn class="q-ml-sm" icon-right="mail" color="green" @click="rsvp">RSVP</q-btn> -->
             </div>
           </q-card>
+<!-- card to export  -->
+        </div>
+      </div>
 
-          <q-btn class="q-ml-sm" icon-right="save_alt" color="blue" @click="fileExport">Save HTML</q-btn>
+          <!-- <q-btn class="q-ml-sm" icon-right="save_alt" color="blue" @click="fileExport">Save HTML</q-btn> -->
 
           <q-stepper-navigation>
             <q-btn color="secondary" icon="publish" @click="$refs.eventSteper.goToStep('event_add')">Back to Top</q-btn>
@@ -239,6 +255,7 @@ export default {
       hosts: ['Your Meetup', 'Your Organizer'],
       startDate: today,
       endDate: today,
+      rsvpMax: 10,
       color: '#2069BD',
       loca: 'Location',
       bodyText: '<h3>Header 3</h3><div>Normal text; <b>bold</b>; <i>italic</i>; <strike>strike-trough</strike>; <u style="font-weight: bold; font-style: italic;">bold, italic and underline</u>;</div><div><u>A <i style="font-weight: bold;">mo</i>re <i style="font-weight: bold;">com</i>plica</u>ted example.</div><div><br></div><div>Link to <a href="http://quasar-framework.org">Quasar Documentation</a></div><div><font face="Courier New">Using "Courier New" font.</font></div><div><ul><li>Vue</li><li>Webpack</li></ul><ol><li>Website</li><li>App</li><ol><li>Mobile (Cordova)</li><li>Electron</li></ol></ol><div style="text-align: center;">Center aligned text</div></div><div style="text-align: right;">Right aligned</div>',
