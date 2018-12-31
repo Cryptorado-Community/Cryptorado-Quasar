@@ -85,7 +85,6 @@
           <q-autocomplete
             :static-data="{field: 'value', list: tags}"
             :min-characters="0"
-            @search="search"
           />
       </q-chips-input>
 
