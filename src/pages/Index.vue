@@ -1,13 +1,14 @@
 <template>
-  <q-page class="bk-alt">
-    <div class="video_bk">
-      <iframe
-        frameborder="0"
-        height="110%"
-        width="150%"
-        src="https://www.youtube.com/embed/gkf_tMj9NCM?modestbranding=0&loop=1&showinfo=0&iv_load_policy=3&autoplay=1&controls=0&start=7&mute=1&playlist=gkf_tMj9NCM"
-       ></iframe>
-    </div>
+  <q-page>
+    <img
+      src="statics/denver-skyline.jpg"
+      class=" bk-alt absolute-center"
+    >
+    <iframe
+      class="video_bk"
+      frameborder="0"
+      src="https://www.youtube.com/embed/gkf_tMj9NCM?modestbranding=0&loop=1&showinfo=0&iv_load_policy=3&autoplay=1&controls=0&start=7&mute=1&playlist=gkf_tMj9NCM"
+     ></iframe>
     <div class="row items-center absolute-center justify-around text-white" style="width: 90%; background-color: rgba(133, 133, 173,0.7);  border-radius: 10px;">
       <!-- <div class="col-1"></div> -->
       <div class="col-10 col-md-4">
@@ -30,19 +31,18 @@ export default {
 
 <style>
 .bk-alt{
-  background: url('../statics/denver-skyline.jpg');
+  min-height: 100vh;
+  min-width: 100vw;
   z-index: -99;
-  background-size: 100% contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
 }
 .video_bk{
-    position: fixed;
-    z-index: -98;
-    width: 500%;
-    height: 100%;
-    transform: translateX(-65%) translateY(-10%);
-    overflow: hidden;
+  position: fixed;
+  z-index: -98;
+  min-height: 180vh;
+  min-width: 300vw;
+  transform: translateX(-33%) translateY(-25%);
+}
+body {
+    overflow:hidden;
 }
 </style>
