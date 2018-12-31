@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page style="overflow:hidden">
     <img
       src="statics/denver-skyline.jpg"
       class=" bk-alt absolute-center"
@@ -41,8 +41,5 @@ export default {
   min-height: 180vh;
   min-width: 300vw;
   transform: translateX(-33%) translateY(-25%);
-}
-body {
-    overflow:hidden;
 }
 </style>

@@ -56,7 +56,4 @@ export default {
 </script>
 
 <style>
-.q-tab{
-  padding: 0px;
-}
 </style>
