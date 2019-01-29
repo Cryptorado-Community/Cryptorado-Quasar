@@ -1,12 +1,13 @@
 <template>
   <q-page padding>
+    <h1> <center>!! UNDER CONSTRUCTION !!</center> </h1>
     <q-list
       no-border
       link
       inset-delimiter
     >
 
-      <q-item @click.native="openURL('http://quasar-framework.org')">
+      <q-item @click.native="openURL('http://launchpass.com/coloradoblockchain')">
         <q-item-side icon="people" />
         <q-item-main label="Meetups" sublabel="Listing by our Community" />
       </q-item>
@@ -25,7 +26,7 @@
             </q-item>
       </q-collapsible>
 
-      <q-item @click.native="openURL('http://forum.quasar-framework.org')">
+      <q-item @click.native="openURL('http://launchpass.com/coloradoblockchain')">
         <q-item-side icon="forum" />
         <q-item-main label="Forum" sublabel="forum.quasar-framework.org" />
       </q-item>
@@ -44,13 +45,13 @@
           >
           <q-item @click.native="openURL('https://coinmap.org/#/map/39.76442532/-104.85478670/11')">
             <q-item-side icon="map" />
-            <q-item-main label="Local Crypto Businesses" sublabel="Coinmap.org" />
+            <q-item-main label="Local Cryptocurrency Accepting Businesses" sublabel="Coinmap.org" />
           </q-item>
           <q-item @click.native="openURL('https://docs.google.com/spreadsheets/d/1Bvpzr162eWFRo_f3tuhOnCVF-l5USTSBdqeJGVBqjjs/edit#gid=0')">
             <q-item-side icon="list_alt" />
             <q-item-main label="Colorado Blockchain Companies" />
           </q-item>
-          <q-item @click.native="openURL('https://docs.google.com/spreadsheets/d/1Bvpzr162eWFRo_f3tuhOnCVF-l5USTSBdqeJGVBqjjs/edit#gid=0')">
+          <q-item @click.native="openURL('https://www.meetup.com/Denver-Blockchain/')">
             <q-item-side icon="laptop_chromebook" />
             <q-item-main label="Free Coworking" sublabel="Every Thursday" />
           </q-item>

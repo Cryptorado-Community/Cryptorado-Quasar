@@ -20,13 +20,6 @@
           />
 
           <q-route-tab
-            label="Chat"
-            to="/Chat"
-            icon="people"
-            slot="title"
-          />
-
-          <q-route-tab
             label="Resources"
             to="/Resources"
             icon="device_hub"
