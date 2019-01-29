@@ -114,69 +114,71 @@
           </q-stepper-navigation>
           <strong>Note:</strong> Your page banner is generated for you - this is just the body text
           <br><br>
-            <q-editor
-              v-model="bodyText"
-              :toolbar="[
-                ['bold', 'italic', 'strike', 'underline', 'subscript', 'superscript'],
-                ['token', 'hr', 'link', 'custom_btn'],
-                ['print', 'fullscreen'],
-                [
-                  {
-                    label: $q.i18n.editor.formatting,
-                    icon: $q.icon.editor.formatting,
-                    list: 'no-icons',
-                    options: ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'code']
-                  },
-                  {
-                    label: $q.i18n.editor.fontSize,
-                    icon: $q.icon.editor.fontSize,
-                    fixedLabel: true,
-                    fixedIcon: true,
-                    list: 'no-icons',
-                    options: ['size-1', 'size-2', 'size-3', 'size-4', 'size-5', 'size-6', 'size-7']
-                  },
-                  {
-                    label: $q.i18n.editor.defaultFont,
-                    icon: $q.icon.editor.font,
-                    fixedIcon: true,
-                    list: 'no-icons',
-                    options: ['default_font', 'arial', 'arial_black', 'comic_sans', 'courier_new', 'impact', 'lucida_grande', 'times_new_roman', 'verdana']
-                  },
-                  'removeFormat'
-                ],
-                ['quote', 'unordered', 'ordered', 'outdent', 'indent'],
-                [
-                  {
-                    label: $q.i18n.editor.align,
-                    icon: $q.icon.editor.align,
-                    fixedLabel: true,
-                    list: 'only-icons',
-                    options: ['left', 'center', 'right', 'justify']
-                  },
-                  {
-                    label: $q.i18n.editor.align,
-                    icon: $q.icon.editor.align,
-                    fixedLabel: true,
-                    options: ['left', 'center', 'right', 'justify']
-                  }
-                ],
-                ['undo', 'redo']
-              ]"
-              :fonts="{
-                arial: 'Arial',
-                arial_black: 'Arial Black',
-                comic_sans: 'Comic Sans MS',
-                courier_new: 'Courier New',
-                impact: 'Impact',
-                lucida_grande: 'Lucida Grande',
-                times_new_roman: 'Times New Roman',
-                verdana: 'Verdana'
-              }"
-            />
-      <br>
-          <q-stepper-navigation>
+
+          <div class="row items-center justify-around">
+            <div class="q-my-md col-10 col-md-6">
+              <q-editor
+                v-model="bodyText"
+                :toolbar="[
+                  ['bold', 'italic', 'strike', 'underline'],
+                  ['token', 'hr', 'link', 'custom_btn'],
+                  [
+                    {
+                      /* label: $q.i18n.editor.formatting, */
+                      icon: $q.icon.editor.formatting,
+                      fixedLabel: true,
+                      list: 'no-icons',
+                      options: ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'code']
+                    },
+                    {
+                      /* label: $q.i18n.editor.fontSize, */
+                      icon: $q.icon.editor.fontSize,
+                      fixedLabel: true,
+                      fixedIcon: true,
+                      list: 'no-icons',
+                      options: ['size-1', 'size-2', 'size-3', 'size-4', 'size-5', 'size-6', 'size-7']
+                    },
+                    {
+                      /* label: $q.i18n.editor.defaultFont, */
+                      icon: $q.icon.editor.font,
+                      fixedLabel: true,
+                      fixedIcon: true,
+                      list: 'no-icons',
+                      options: ['default_font', 'arial', 'arial_black', 'comic_sans', 'courier_new', 'impact', 'lucida_grande', 'times_new_roman', 'verdana']
+                    }
+                  ],
+                  [
+                    {
+                      /* label: $q.i18n.editor.align, */
+                      icon: $q.icon.editor.align,
+                      fixedLabel: true,
+                      list: 'only-icons',
+                      options: ['left', 'center', 'right', 'justify']
+                    }
+                  ],
+                  ['unordered', 'ordered','outdent', 'indent'],
+                  ['removeFormat']
+                  /* , ['undo', 'redo'] */
+                ]"
+                :fonts="{
+                  arial: 'Arial',
+                  arial_black: 'Arial Black',
+                  comic_sans: 'Comic Sans MS',
+                  courier_new: 'Courier New',
+                  impact: 'Impact',
+                  lucida_grande: 'Lucida Grande',
+                  times_new_roman: 'Times New Roman',
+                  verdana: 'Verdana'
+                }"
+              />
+            </div>
+          </div>
+
+          <q-stepper-navigation padd>
             <q-btn color="primary" icon-right="keyboard_arrow_down" @click="$refs.eventSteper.next()">Continue</q-btn>
           </q-stepper-navigation>
+          <!-- For spacing on phones -->
+          <br><br><br>
         </q-step>
 
         <q-step name="finalize" title="Submit" subtitle="Preview Submit Your Event">
@@ -187,6 +189,7 @@
 <!-- card to export  -->
       <div class="row items-center justify-around">
         <div class="q-my-md col-10 col-md-6">
+          <h5 class="q-my-none" style="text-align: center"><em>Preview</em></h5>
           <q-card class="q-ma-sm">
             <q-card-media style="height: 250px;">
               <img src="statics/cobc_logo.jpg"
@@ -225,9 +228,9 @@
               <q-btn class="q-ml-sm" icon-right="mail" color="green" @click="rsvp">RSVP</q-btn> -->
             </div>
           </q-card>
-<!-- card to export  -->
         </div>
       </div>
+<!-- card to export  -->
 
           <!-- <q-btn class="q-ml-sm" icon-right="save_alt" color="blue" @click="fileExport">Save HTML</q-btn> -->
 

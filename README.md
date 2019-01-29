@@ -111,6 +111,7 @@ For Educational / Informational content. refined ideas from Forum.
 
 #### Project Board
 - [ ] Company Projects AND **Community Projects**
+  - [ ] [Present known companies in google sheets](https://docs.google.com/spreadsheets/d/10FCHhI0S-FpCURPzDKdeOEgGIDolGQL58hTY5vpCnug/edit#gid=1084493826) 
   - [ ] What are you working on?
   - [ ] What help do you need? (jobs)
   - [ ] **Integrate bounties**
