@@ -37,7 +37,9 @@
 
 // var dataURL = 'https://getipfs.com/QmcMnY5PXMnrBSekMu8HEE3jwq4jy5dwsdrnLBUkasjmtK' // IPFS data via gateway proxy -- needs CORS enabled
 // var dataURL = 'https://ipns.co/QmcMnY5PXMnrBSekMu8HEE3jwq4jy5dwsdrnLBUkasjmtK' // IPFS data via gateway proxy -- needs CORS enabled
-var dataURL = 'https://cloudflare-ipfs.com/ipfs/QmcMnY5PXMnrBSekMu8HEE3jwq4jy5dwsdrnLBUkasjmtK'
+// var dataURL = 'https://cloudflare-ipfs.com/ipfs/QmcMnY5PXMnrBSekMu8HEE3jwq4jy5dwsdrnLBUkasjmtK'
+
+import eventsData from '../data/events.json' // static local data import
 
 import {
   date,
@@ -55,8 +57,6 @@ import {
   CalendarMultiDay,
   CalendarAgenda
 } from 'quasar-calendar'
-
-// import eventsData from '../assets/events.json' // static local data import
 
 export default {
   name: 'PageIndex',
@@ -78,11 +78,11 @@ export default {
     }
   },
   mounted () {
-    // this.eventArray = eventsData // static local data import
-    this.$axios.get(dataURL)
-      .then((response) => {
-        this.eventArray = response.data // TODO: CORS issue on some gateways - it is on their end... use another one.
-      })
+    this.eventArray = eventsData // static local data import
+    // this.$axios.get(dataURL)
+    //   .then((response) => {
+    //     this.eventArray = response.data // TODO: CORS issue on some gateways - it is on their end... use another one.
+    //   })
   },
   methods: {
     getSqlDateFormat: function (dateObject, withTime) {

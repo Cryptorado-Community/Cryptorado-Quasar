@@ -1,35 +1,58 @@
 [
   {
     "id": 1,
-    "summary": "Test event",
-    "description": "Some extra info goes here",
-    "location":" 'Office of the Divine Randomness, 1232 Main St., Denver, CO'",
+    "color": "purple",
+    "summary": "BUIDL Week",
+    "description": "Free coworking and Community contributed events! RSVP for events at ethdenver.com/buidlweek",
+    "location":"Enterprise Coworking, 1000 North Broadway, Denver, CO",
     "start": {
-      "dateTime": "2018-12-16T14:00:00",
-      "timeZone": "Europe/Zurich"
+      "date": "2019-02-11"
     },
     "end": {
-      "dateTime": "2018-12-16T16:30:00",
-      "timeZone": "Europe/Zurich"
+      "date": "2019-02-14"
+    }
+  },
+  {
+    "id": 2,
+    "color": "purple",
+    "summary": "ETHDenver",
+    "description": " The Premiere Ethereum evnt of the year! Apply and find out more before 1/31/19 at ethdenver.com",
+    "location":"The Crypto-Castle, 1000 North Broadway, Denver, CO",
+    "start": {
+      "date": "2019-02-15"
     },
-    "color": "positive",
-    "attendees": [
-      {
-        "id": 5,
-        "email": "somebody@somewhere.com",
-        "displayName": "John Q. Public",
-        "organizer": false,
-        "self": false,
-        "resource": false
-      },
-      {
-        "id": 6,
-        "email": "somebody@somewhere.com",
-        "displayName": "John Q. Public",
-        "organizer": false,
-        "self": false,
-        "resource": false
-      }
-    ]
+    "end": {
+      "date": "2019-02-17"
+    }
+  },
+  {
+    "id": 3,
+    "summary": "Free Coworking",
+    "description": "https://www.meetup.com/Denver-Blockchain/events/fjvgmqyzcbpc/",
+    "location":"Enterprise Coworking, 1000 North Broadway, Denver, CO",
+    "start": {
+      "dateTime": "2019-01-30T08:00:00",
+      "timeZone": "America/Denver"
+    },
+    "end": {
+      "dateTime": "2019-01-30T17:00:00",
+      "timeZone": "America/Denver"
+    },
+    "color": "blue"
+  },
+  {
+    "id": 4,
+    "summary": "Denver Blockchain",
+    "description": "https://www.meetup.com/Denver-Blockchain/events/kvwhbqyzcbpc/",
+    "location":"World Wide Technology, Inc. - 2300 15th St #100, Denver, CO",
+    "start": {
+      "dateTime": "2019-01-30T18:30:00",
+      "timeZone": "America/Denver"
+    },
+    "end": {
+      "dateTime": "2019-01-30T21:00:00",
+      "timeZone": "America/Denver"
+    },
+    "color": "positive"
   }
 ]
