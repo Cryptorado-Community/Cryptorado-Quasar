@@ -1,7 +1,7 @@
 # New Community Website
 ---
 ### Live demo at: https://colorado-community-resources.github.io
-### Developement Chat: https://discord.gg/pP8UEdF
+### Development Group Chat: https://discord.gg/pP8UEdF
 ---
 ## Goal:
 A community run and maintained website that **anyone can host** and contribute to. It will be the place to go to find out what is going on in the Colorado Blockchain & DLT community. Resources will be available to get connected, to learn, and to get involved in all that is going on.
