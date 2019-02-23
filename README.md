@@ -2,6 +2,7 @@
 ---
 ### Live demo at: https://colorado-community-resources.github.io
 ### Development Group Chat: https://discord.gg/pP8UEdF
+### Overview of Project's Mission: https://decentralizedsummit.com/agenda/dan-shields-ethdenver/ 
 ---
 ## Goal:
 A community run and maintained website that **anyone can host** and contribute to. It will be the place to go to find out what is going on in the Colorado Blockchain & DLT community. Resources will be available to get connected, to learn, and to get involved in all that is going on.
