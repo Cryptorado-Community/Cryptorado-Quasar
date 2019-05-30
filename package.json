@@ -29,7 +29,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.3.0",
     "push-dir": "^0.4.1",
-    "quasar-cli": "^0.17.23",
+    "quasar-cli": "^0.17.25",
     "strip-ansi": "=3.0.1"
   },
   "engines": {
