@@ -1,10 +1,11 @@
 # Installation Notes:
 Instructions and tips for development
-## How to configure to deploy to gihub pages:
-  - [Instructions](https://quasar-framework.org/guide/app-deploying-spa.html#Deploying-on-GitHub-Pages)
-  - [Our Github Pages Repo](https://github.com/Decentralize-Colorado/decentralize-colorado.github.io)
-    - `https://github.com/Decentralize-Colorado/decentralize-colorado.github.io`
-    - [Live Site](https://decentralize-colorado.github.io)
 
-## Components (all the fun things to use!)
-- https://quasar-framework.org/components/
+## Quazar Install
+
+https://quasar.dev/quasar-cli/installation
+
+```bash
+# Node.js >= 8.9.0 is required.
+$ npm install -g @quasar/cli
+```
