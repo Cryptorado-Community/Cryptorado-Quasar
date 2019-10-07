@@ -1,7 +1,7 @@
 # Installation Notes:
 Instructions and tips for development
 
-## Quazar Install
+## Quasar Install
 
 https://quasar.dev/quasar-cli/installation
 
