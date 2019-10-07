@@ -1,7 +1,7 @@
 # New Community Website
 ---
 ### Live demo at: https://colorado-community-resources.github.io
-### Development Group Chat: https://discord.gg/pP8UEdF
+### Development Group Chat: https://keybase.io/team/cryptorado (ask `nukemandan` to join the development subteam)
 ### Overview of Project's Mission: https://decentralizedsummit.com/agenda/dan-shields-ethdenver/ 
 ---
 ## Goal:
