@@ -6,15 +6,15 @@
 
 ### Development Group Chat: https://keybase.io/team/cryptorado (ask `nukemandan` to join the development subteam)
 
-### Overview of Project's Mission: https://decentralizedsummit.com/agenda/dan-shields-ethdenver/
+### Trello Board: https://trello.com/b/HRBK38bi/cryptorado
 
 ---
 
 ## Goal:
 
-A community run and maintained website that **anyone can host** and contribute to. It will be the place to go to find out what is going on in the Colorado Blockchain & DLT community. Resources will be available to get connected, to learn, and to get involved in all that is going on.
+A community run and maintained website that **anyone can host** and contribute to. It will be the place to go to find out what is going on in the Cryptorado & DLT community. Resources will be available to get connected, to learn, and to get involved in all that is going on.
 
-The site aims to be _static_ and _client side only compute (or integrated API calls for distributed compute)_ to enable one to completely own and manage their own data on the site, and are _incentivized_ to host and run operations related to the site. (see [Desired Architecture and Features](https://github.com/Colorado-Community-Resources/CORE-Website#desired-architecture-and-features))
+The site aims to be _static_ and _client side only compute (or integrated API calls for distributed compute)_ to enable one to completely own and manage their own data on the site, and are _incentivized_ to host and run operations related to the site. (see [Desired Architecture and Features](https://github.com/Cryptorado-Community/CORE-Website#desired-architecture-and-features))
 
 ## Dev Notes
 
