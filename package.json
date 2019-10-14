@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
+    "build": "quasar build",
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"No test specified\" && exit 0",
     "deploy": "push-dir --dir=dist/spa-mat --remote=gh-pages --branch=master"
