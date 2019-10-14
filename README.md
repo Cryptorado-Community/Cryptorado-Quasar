@@ -2,7 +2,7 @@
 
 ---
 
-### Live demo at: https://colorado-community-resources.github.io
+### Live demo at: https://cryptorado-community.github.io
 
 ### Development Group Chat: https://keybase.io/team/cryptorado (ask `nukemandan` to join the development subteam)
 
