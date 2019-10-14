@@ -4,11 +4,6 @@
       src="statics/denver-skyline.jpg"
       class=" bk-alt absolute-center"
     >
-    <iframe
-      class="video_bk"
-      frameborder="0"
-      src="https://www.youtube.com/embed/gkf_tMj9NCM?modestbranding=0&loop=1&showinfo=0&iv_load_policy=3&autoplay=1&controls=0&start=7&mute=1&playlist=gkf_tMj9NCM"
-     ></iframe>
     <div class="row items-center absolute-center text-white" style="width: 90%; background-color: rgba(133, 133, 173,0.7);  border-radius: 10px;">
       <div class="col-12 col-md-5">
         <h3 class="q-my-sm text-weight-bold"> <center> <em>Building a <br>Blockchain  Community</em></center> </h3>
@@ -40,7 +35,7 @@
             text-color="black"
             size="lg"
             label="Join Our Community"
-            @click.native="openURL('https://launchpass.com/coloradoblockchain')"
+            @click.native="openURL('https://keybase.io/team/cryptorado')"
           />
         </center>
       </div>
