@@ -36,6 +36,26 @@ npm install
 npm run dev
 ```
 
+### Build and Deploy
+
+> Note you need write access to [the Cryptorado-Community.github.io repo](https://github.com/Cryptorado-Community/Cryptorado-Community.github.io) to deploy to it! We also assume you have setup and use an [SSH key to access github](https://help.github.com/en/articles/connecting-to-github-with-ssh)
+
+Set a new `gh-pages` remote for git:
+
+```bash
+# Note: run this in the pjoject directory!
+$ git remote add gh-pages git@github.com:Cryptorado-Community/Cryptorado-Community.github.io.git
+```
+
+
+Build w/ quasar and deploy:
+
+```bash
+# Note: run this in the project directory!
+$ npm run build
+$ npm run deploy
+```
+
 ## Key Content:
 
 ### An Event and Meetup Calendar
