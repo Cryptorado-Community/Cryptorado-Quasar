@@ -6,7 +6,7 @@
 
 ### Development Group Chat: https://keybase.io/team/cryptorado (ask `nukemandan` to join the development subteam)
 
-### Trello Board: https://trello.com/b/HRBK38bi/cryptorado
+### Project Board: https://github.com/Cryptorado-Community/Cryptorado-Home/projects/2
 
 ---
 
