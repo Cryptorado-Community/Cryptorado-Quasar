@@ -9,7 +9,7 @@
             slot="title"
             style="padding: 5px 5px"
           >
-            <img src="~/assets/cobc_white_text.png" style="height: 70px" alt="Home">
+            <img src="~/../statics/cryptorado_colored.png" style="height: 70px" alt="Home">
           </q-route-tab>
 
           <q-route-tab
