@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
+    "build": "quasar build",
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"No test specified\" && exit 0",
     "deploy": "push-dir --dir=dist/spa-mat --remote=gh-pages --branch=master"
@@ -15,6 +16,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "lodash.has": "^4.5.2",
+    "lodash.template": ">=4.5.0",
     "quasar-calendar": "^0.3.1",
     "vue-i18n": "^7.3.3"
   },

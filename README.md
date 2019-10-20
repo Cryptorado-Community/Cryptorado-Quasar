@@ -2,19 +2,19 @@
 
 ---
 
-### Live demo at: https://colorado-community-resources.github.io
+### Live demo at: https://cryptorado-community.github.io
 
 ### Development Group Chat: https://keybase.io/team/cryptorado (ask `nukemandan` to join the development subteam)
 
-### Overview of Project's Mission: https://decentralizedsummit.com/agenda/dan-shields-ethdenver/
+### Project Board: https://github.com/Cryptorado-Community/Cryptorado-Home/projects/2
 
 ---
 
 ## Goal:
 
-A community run and maintained website that **anyone can host** and contribute to. It will be the place to go to find out what is going on in the Colorado Blockchain & DLT community. Resources will be available to get connected, to learn, and to get involved in all that is going on.
+A community run and maintained website that **anyone can host** and contribute to. It will be the place to go to find out what is going on in the Cryptorado & DLT community. Resources will be available to get connected, to learn, and to get involved in all that is going on.
 
-The site aims to be _static_ and _client side only compute (or integrated API calls for distributed compute)_ to enable one to completely own and manage their own data on the site, and are _incentivized_ to host and run operations related to the site. (see [Desired Architecture and Features](https://github.com/Colorado-Community-Resources/CORE-Website#desired-architecture-and-features))
+The site aims to be _static_ and _client side only compute (or integrated API calls for distributed compute)_ to enable one to completely own and manage their own data on the site, and are _incentivized_ to host and run operations related to the site. (see [Desired Architecture and Features](https://github.com/Cryptorado-Community/CORE-Website#desired-architecture-and-features))
 
 ## Dev Notes
 
@@ -34,6 +34,26 @@ $ npm install -g @quasar/cli
 ```
 npm install
 npm run dev
+```
+
+### Build and Deploy
+
+> Note you need write access to [the Cryptorado-Community.github.io repo](https://github.com/Cryptorado-Community/Cryptorado-Community.github.io) to deploy to it! We also assume you have setup and use an [SSH key to access github](https://help.github.com/en/articles/connecting-to-github-with-ssh)
+
+Set a new `gh-pages` remote for git:
+
+```bash
+# Note: run this in the pjoject directory!
+$ git remote add gh-pages git@github.com:Cryptorado-Community/Cryptorado-Community.github.io.git
+```
+
+
+Build w/ quasar and deploy:
+
+```bash
+# Note: run this in the project directory!
+$ npm run build
+$ npm run deploy
 ```
 
 ## Key Content:
