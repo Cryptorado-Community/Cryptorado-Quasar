@@ -1,10 +1,10 @@
 <template>
   <q-page style="overflow:hidden">
     <img
-      src="statics/denver-skyline.jpg"
+      src="statics/cryptorado_banner_clean.jpeg"
       class=" bk-alt absolute-center"
     >
-    <div class="row items-center absolute-center text-white" style="width: 90%; background-color: rgba(133, 133, 173,0.7);  border-radius: 10px;">
+    <div class="row items-center absolute-center text-acce" style="width: 90%; background-color: rgba(245,241,234,.7);  border-radius: 10px;">
       <div class="col-12 col-md-5">
         <h3 class="q-my-sm text-weight-bold"> <center> <em>Building a <br>Blockchain  Community</em></center> </h3>
       </div>
@@ -12,14 +12,11 @@
         <strong><em>Colorado</em></strong> has one of the largest and most active <strong><em>blockchain</em></strong> communities in the world. The state is home to thought leaders and builders of these disruptive technologies. If you want to get connected with fellow entrepreneurs, investors, and developers; <strong><em>Colorado is the best place to be.</em></strong>
       </div>
 
-      <div class="q-my-md col-12">
-        <center>  <h6 class="q-my-none" >We welcome everyone from the experts to the complete novice!</h6></center>
-      </div>
         <div class="q-my-md col-3">
             <q-btn
               glossy
-              class="shadow-20 float-right"
-              color="white"
+              class="shadow-24 float-right"
+              color="secondary"
               text-color="black"
               size="md"
               to="Events"
@@ -29,9 +26,9 @@
       <div class="col-6">
         <center>
           <q-btn
-            class="shadow-20"
+            class="shadow-24"
             glossy
-            color="white"
+            color="secondary"
             text-color="black"
             size="lg"
             label="Join Our Community"
@@ -41,14 +38,17 @@
       </div>
       <div class="q-my-md col-3">
           <q-btn
-            class="shadow-20"
+            class="shadow-24"
             glossy
-            color="white"
+            color="secondary"
             text-color="black"
             size="md"
             to="Resources"
             label="Resources"
           />
+    </div>
+    <div class="q-my-md col-12">
+      <center>  <h6 class="q-my-none">We welcome everyone from the experts to the complete novice!</h6></center>
     </div>
     </div>
   </q-page>
