@@ -11,6 +11,7 @@
     "build": "quasar build",
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"No test specified\" && exit 0",
+    "predeploy": "echo 'cryptorado.org' >> dist/CNAME",
     "deploy": "push-dir --dir=dist/spa-mat --remote=gh-pages --branch=master"
   },
   "dependencies": {
