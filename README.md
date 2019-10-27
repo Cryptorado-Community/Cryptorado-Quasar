@@ -1,8 +1,8 @@
-# New Community Website
+# Cryptorado Community Website
 
 ---
 
-### Live demo at: https://cryptorado-community.github.io
+### Live at: https://cryptorado.org
 
 ### Development Group Chat: https://keybase.io/team/cryptorado (ask `nukemandan` to join the development subteam)
 
