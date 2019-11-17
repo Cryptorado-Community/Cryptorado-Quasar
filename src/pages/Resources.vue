@@ -16,12 +16,7 @@
 
       <q-item @click.native="openURL('https://keybase.io/team/cryptorado')">
         <q-item-side icon="fab fa-keybase" />
-        <q-item-main label="Keybase" />
-      </q-item>
-
-      <q-item @click.native="openURL('http://launchpass.com/coloradoblockchain')">
-        <q-item-side icon="donut_small" />
-        <q-item-main label="Slack" />
+        <q-item-main label="Keybase" sublabel="Online Chat Group" />
       </q-item>
 
       <q-item @click.native="openURL('https://www.youtube.com/channel/UCySU1TwgrLAU_1tF8lDt9bQ')">
@@ -51,7 +46,7 @@
 
       <q-item @click.native="openURL('https://www.meetup.com/Denver-Blockchain/')">
         <q-item-side icon="laptop_chromebook" />
-        <q-item-main label="Free Coworking" sublabel="Every Thursday" />
+        <q-item-main label="Free Coworking" sublabel="Every Thursday!" />
       </q-item>
     </q-list>
   </div>
