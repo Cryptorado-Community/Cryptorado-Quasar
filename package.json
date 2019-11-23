@@ -1,8 +1,8 @@
 {
   "name": "CORE_Web",
   "version": "1.0.0",
-  "description": "The home of th Colorado Blockchain Community",
-  "productName": "Colorado Blockchain Community",
+  "description": "The home of the Cryptorado Community",
+  "productName": "Cryptorado Community",
   "cordovaId": "org.cordova.quasar.app",
   "author": "Dan Shields <danwshields@gmail.com>",
   "private": true,

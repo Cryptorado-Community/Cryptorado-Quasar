@@ -100,9 +100,9 @@ module.exports = function (ctx) {
       // workboxPluginMode: 'InjectManifest',
       // workboxOptions: {},
       manifest: {
-        name: 'Colorado Blockchain Home',
+        name: 'Cryptorado Home',
         short_name: 'COBC-Home',
-        description: 'Building a Colorado Blockchain Community',
+        description: 'The Home of the Cryptorado Community',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
