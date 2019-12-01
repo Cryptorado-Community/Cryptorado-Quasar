@@ -4,7 +4,7 @@
   "description": "The home of the Cryptorado Community",
   "productName": "Cryptorado Community",
   "cordovaId": "org.cordova.quasar.app",
-  "author": "Dan Shields <danwshields@gmail.com>",
+  "author": "Dan Shields <dan@cryptorado.org>",
   "private": true,
   "scripts": {
     "dev": "quasar dev",
