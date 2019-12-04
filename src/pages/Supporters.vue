@@ -17,7 +17,7 @@
       </div>
 
       <div class="col-12 q-pt-md">
-        <center> <img src="assets/SandersonIPLaw_logo.svg" style="height: 140px; cursor: pointer" @click="openURL('https://sandersoniplaw.com/')"> </center>
+        <center> <img src="statics/SandersonIPLaw_logo.svg" style="height: 140px; cursor: pointer" @click="openURL('https://sandersoniplaw.com/')"> </center>
       </div>
 
       <!-- Headline -->
@@ -28,15 +28,15 @@
       </div>
 
       <div class="col-3 q-pt-md">
-        <center> <img src="assets/dnv_blckchain.png" style="height: 100px; cursor: pointer" @click="openURL('https://www.meetup.com/Denver-Blockchain/')"> </center>
+        <center> <img src="statics/dnv_blckchain.png" style="height: 100px; cursor: pointer" @click="openURL('https://www.meetup.com/Denver-Blockchain/')"> </center>
       </div>
 
       <div class="col-3 q-pt-md">
-        <center> <img src="assets/Aproflow.png" style="height: 100px; cursor: pointer" @click="openURL('https://aproflow.com')"> </center>
+        <center> <img src="statics/Aproflow.png" style="height: 100px; cursor: pointer" @click="openURL('https://aproflow.com')"> </center>
       </div>
 
       <div class="col-3 q-pt-md">
-        <center> <img src="assets/ethdenver_transp-white.png" style="height: 100px; cursor: pointer" @click="openURL('https://ethdenver.com')"> </center>
+        <center> <img src="statics/ethdenver_transp-white.png" style="height: 100px; cursor: pointer" @click="openURL('https://ethdenver.com')"> </center>
       </div>
 
     </div>
