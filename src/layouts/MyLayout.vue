@@ -26,6 +26,13 @@
             slot="title"
           />
 
+          <q-route-tab
+            label="Supporters"
+            to="/Supporters"
+            icon="people"
+            slot="title"
+          />
+
         </q-tabs>
 
     </q-layout-header>

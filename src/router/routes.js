@@ -6,7 +6,8 @@ const routes = [
       { path: '', component: () => import('pages/Index.vue') },
       { path: 'Resources', component: () => import('pages/Resources.vue') },
       { path: '/Events/Add_Event', component: () => import('pages/Add_Event.vue') },
-      { path: '/Events', component: () => import('pages/Events.vue') }
+      { path: '/Events', component: () => import('pages/Events.vue') },
+      { path: 'Supporters', component: () => import('pages/Supporters.vue') }
     ]
   }
 ]
