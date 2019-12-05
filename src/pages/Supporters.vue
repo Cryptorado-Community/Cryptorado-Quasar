@@ -5,8 +5,8 @@
 
     <div class="row wrap justify-around">
       <!-- Banner -->
-      <div class="col-12 q-pt-md">
-        <center> <img src="statics/cryptorado.png" style="max-width: 30%"> </center>
+      <div class="col-12 q-pt-md" >
+        <center> <img src="statics/cryptorado.png" style="max-width: 30%; min-width: 140px;"> </center>
       </div>
 
       <!-- Headline -->
@@ -16,8 +16,8 @@
         </h5>
       </div>
 
-      <div class="col-12 q-pt-md">
-        <center> <img src="statics/SandersonIPLaw_logo.svg" style="height: 140px; cursor: pointer" @click="openURL('https://sandersoniplaw.com/')"> </center>
+      <div class="col-12" style="min-width: 120px;">
+        <center> <img src="statics/SandersonIPLaw_logo.svg" style="height: 120px; max-width: 100%; cursor: pointer" @click="openURL('https://sandersoniplaw.com/')"> </center>
       </div>
 
       <!-- Headline -->
@@ -27,15 +27,15 @@
         </h5>
       </div>
 
-      <div class="col-3 q-pt-md">
+      <div class="col-4" style="min-width: 80px;">
         <center> <img src="statics/dnv_blckchain.png" style="height: 100px; cursor: pointer" @click="openURL('https://www.meetup.com/Denver-Blockchain/')"> </center>
       </div>
 
-      <div class="col-3 q-pt-md">
+      <div class="col-4" style="min-width: 80px;">
         <center> <img src="statics/Aproflow.png" style="height: 100px; cursor: pointer" @click="openURL('https://aproflow.com')"> </center>
       </div>
 
-      <div class="col-3 q-pt-md">
+      <div class="col-4" style="min-width: 80px;">
         <center> <img src="statics/ethdenver_transp-white.png" style="height: 100px; cursor: pointer" @click="openURL('https://ethdenver.com')"> </center>
       </div>
 
