@@ -39,7 +39,7 @@
           </div>
           <div class="col-5">
             <center>
-              <q-btn rounded class="shadow-24 full-width q-py-lg" glossy color="secondary" text-color="black" size="md" label="Join Our Community" @click.native="openURL('https://keybase.io/team/cryptorado')" />
+              <q-btn rounded class="shadow-24 full-width q-py-lg" glossy color="secondary" text-color="black" size="md" label="Join Our Community" @click.native="openURL('https://keybase.io/team/cryptorado.public')" />
             </center>
           </div>
           <div class="">

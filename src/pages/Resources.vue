@@ -14,7 +14,7 @@
           <center><em><b>--- Everyone ---</b><br><br></em></center>
         </q-item-label>
 
-        <q-item @click.native="openURL('https://keybase.io/team/cryptorado')">
+        <q-item @click.native="openURL('https://keybase.io/team/cryptorado.public')">
           <q-item-side icon="fab fa-keybase" />
           <q-item-main label="Keybase" sublabel="Online Chat Group" />
         </q-item>
