@@ -33,6 +33,11 @@
           <q-item-side icon="photo_album" />
           <q-item-main label="Photos Albums" sublabel="Community Contributed" />
         </q-item>
+
+        <q-item @click.native="openURL('https://forms.gle/4ei8WGTGsc8ac6ZG8')">
+          <q-item-side icon="assignment" />
+          <q-item-main label="Photos Albums" sublabel="Community Contributed" />
+        </q-item>
       </q-list>
 
       <q-list no-border link class="col-shrink q-py-md">
@@ -51,13 +56,18 @@
         </q-item>
 
         <q-item @click.native="openURL('https://coinmap.org/#/map/39.76442532/-104.85478670/11')">
-          <q-item-side icon="map" />
+          <q-item-side icon="fab fa-bitcoin" />
           <q-item-main label="Crypto Friendly Businesses" sublabel="Coinmap.org" />
         </q-item>
 
         <q-item @click.native="openURL('https://drive.google.com/open?id=10co5YUiYOzyEMhQez5e1ehD6vgb1oOlaSBHzT0gzLQ0')">
-          <q-item-side icon="list_alt" />
+          <q-item-side icon="fas fa-building" />
           <q-item-main label="Blockchain Companies" sublabel="Community Maintained" />
+        </q-item>
+
+        <q-item @click.native="openURL('https://drive.google.com/open?id=10co5YUiYOzyEMhQez5e1ehD6vgb1oOlaSBHzT0gzLQ0')">
+          <q-item-side icon="fas fa-handshake" />
+          <q-item-main label="Opportunity Board" sublabel="Post/Find Talent" />
         </q-item>
       </q-list>
     </div>

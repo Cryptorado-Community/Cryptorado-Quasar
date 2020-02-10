@@ -1,42 +1,45 @@
 <template>
-<q-page>
+<q-page class="q-pa-xl">
 
-  <div class="absolute-center" style="background-color: rgba(245,241,234,.7); border-radius: 10px;">
+  <div class="" style="background-color: rgba(245,241,234,.7); border-radius: 10px;">
 
     <div class="row wrap justify-around">
-      <!-- Banner -->
-      <div class="col-12 q-pt-md" >
-        <center> <img src="statics/cryptorado.png" style="max-width: 30%; min-width: 140px;"> </center>
+      <!-- Logo -->
+      <div>
+        <center> <img src="statics/cryptorado.png" style="margin-top:4vh; height:33vh"> </center>
       </div>
 
       <!-- Headline -->
       <div class="col-11">
-        <h5 class="" style="margin: 0px 0px; padding: 0px 0px">
-          <center> Our Sponsors: </center>
+        <h5 class="" style="margin: 2px 0px; padding: 0px 0px">
+          <center> <em> <b>Our Sponsors:</b> </em> </center>
         </h5>
       </div>
 
       <div class="col-12" style="min-width: 120px;">
-        <center> <img src="statics/SandersonIPLaw_logo.svg" style="height: 120px; max-width: 100%; cursor: pointer" @click="openURL('https://sandersoniplaw.com/')"> </center>
+        <center> <img src="statics/SandersonIPLaw_logo.svg" style="width: 15vw; max-width: 100%; cursor: pointer" @click="openURL('https://sandersoniplaw.com/')"> </center>
       </div>
 
+      <div style="width:20vw">
+        <hr class="q-my-md">
+      </div>
       <!-- Headline -->
       <div class="col-11">
-        <h5 class="" style="margin: 0px 0px; padding: 0px 0px">
-          <center> Our Partners: </center>
+        <h5 class="" style="margin: 10px 0px; padding: 0px 0px">
+          <center> <em> <b>Our Partners:</b> </em> </center>
         </h5>
       </div>
 
       <div class="col-4" style="min-width: 80px;">
-        <center> <img src="statics/dnv_blckchain.png" style="height: 100px; cursor: pointer" @click="openURL('https://www.meetup.com/Denver-Blockchain/')"> </center>
+        <center> <img src="statics/dnv_blckchain.png" style="width: 10vw; cursor: pointer" @click="openURL('https://www.meetup.com/Denver-Blockchain/')"> </center>
       </div>
 
       <div class="col-4" style="min-width: 80px;">
-        <center> <img src="statics/Aproflow.png" style="height: 100px; cursor: pointer" @click="openURL('https://aproflow.com')"> </center>
+        <center> <img src="statics/OpEI_purple.png" style="width: 10vw; cursor: pointer" @click="openURL('https://theopei.com')"> </center>
       </div>
 
       <div class="col-4" style="min-width: 80px;">
-        <center> <img src="statics/ethdenver_transp-white.png" style="height: 100px; cursor: pointer" @click="openURL('https://ethdenver.com')"> </center>
+        <center> <img src="statics/ethdenver_transp-white.png" style="width: 10vw; cursor: pointer" @click="openURL('https://ethdenver.com')"> </center>
       </div>
 
     </div>
