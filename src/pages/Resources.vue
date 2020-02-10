@@ -36,7 +36,7 @@
 
         <q-item @click.native="openURL('https://forms.gle/4ei8WGTGsc8ac6ZG8')">
           <q-item-side icon="assignment" />
-          <q-item-main label="Entry Survey" sublabel="Newsletter and Info" />
+          <q-item-main label="Sign-up & Survey" sublabel="Newsletter Signup & More" />
         </q-item>
       </q-list>
 
@@ -65,7 +65,7 @@
           <q-item-main label="Blockchain Companies" sublabel="Community Maintained" />
         </q-item>
 
-        <q-item @click.native="openURL('https://drive.google.com/open?id=10co5YUiYOzyEMhQez5e1ehD6vgb1oOlaSBHzT0gzLQ0')">
+        <q-item @click.native="openURL('https://docs.google.com/spreadsheets/d/1hob26b_955cpZGZteSOvwDYX19RzSP1FFikgKMHb-os/edit?usp=sharing')">
           <q-item-side icon="fas fa-handshake" />
           <q-item-main label="Opportunity Board" sublabel="Post/Find Talent" />
         </q-item>

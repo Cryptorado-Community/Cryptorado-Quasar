@@ -48,7 +48,7 @@
         <center>
           <q-btn glossy class="shadow-24" style="padding:1vh 5vw; margin:10px 20px" color="secondary" text-color="black" size="md" to="Events" icon="calendar_today" label="Events" />
 
-          <q-btn rounded class="shadow-24" style="padding:10px 10vw" glossy color="primary" text-color="black" size="md" label="Entry Survey" icon="assignment" icon-right="assignment" @click.native="openURL('https://forms.gle/4ei8WGTGsc8ac6ZG8')" />
+          <q-btn rounded class="shadow-24" style="padding:10px 10vw" glossy color="primary" text-color="black" size="md" label="Sign-up & Survey" icon="assignment" icon-right="assignment" @click.native="openURL('https://forms.gle/4ei8WGTGsc8ac6ZG8')" />
 
           <q-btn glossy class="shadow-24" style="padding:1vh 5vw; margin:10px 20px" color="secondary" text-color="black" size="md" to="Resources" icon-right="device_hub" label="Resources" />
         </center>
