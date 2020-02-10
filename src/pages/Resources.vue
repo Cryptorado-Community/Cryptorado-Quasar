@@ -36,7 +36,7 @@
 
         <q-item @click.native="openURL('https://forms.gle/4ei8WGTGsc8ac6ZG8')">
           <q-item-side icon="assignment" />
-          <q-item-main label="Photos Albums" sublabel="Community Contributed" />
+          <q-item-main label="Entry Survey" sublabel="Newsletter and Info" />
         </q-item>
       </q-list>
 
