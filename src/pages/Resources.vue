@@ -1,22 +1,22 @@
 <template>
-<q-page>
+<q-page style="overflow-x:hidden" class="q-pa-lg">
 
-  <div class="absolute-center" style="background-color: rgba(245,241,234,.7); border-radius: 10px;">
+  <div class="q-pa-md" style="background-color: rgba(245,241,234,.7);  border-radius: 10px;">
 
     <div class="row wrap justify-around">
-      <!-- Banner -->
-      <div class="col-12 q-pt-md">
-        <center> <img src="statics/cryptorado.png" style="max-width: 30%"> </center>
-      </div>
-
       <q-list no-border link class="col-shrink q-py-md">
         <q-item-label>
-          <center><em><b>--- Everyone ---</b><br><br></em></center>
+          <center><em><b>--- For Everyone ---</b><br><br></em></center>
         </q-item-label>
 
-        <q-item @click.native="openURL('https://keybase.io/team/cryptorado.public')">
+        <q-item @click.native="openURL('https://discord.gg/3eVjbtb')">
+          <q-item-side icon="fab fa-discord" />
+          <q-item-main label="Discord Community" sublabel="Public Group" />
+        </q-item>
+
+        <q-item @click.native="openURL('https://hackmd.io/@NukeManDan/BkNwtxVUI')">
           <q-item-side icon="fab fa-keybase" />
-          <q-item-main label="Keybase" sublabel="Online Chat Group" />
+          <q-item-main label="Keybase Onboarding" sublabel="Secure Private Group" />
         </q-item>
 
         <q-item @click.native="openURL('https://twitter.com/cryptoradocom')">
@@ -33,26 +33,16 @@
           <q-item-side icon="photo_album" />
           <q-item-main label="Photos Albums" sublabel="Community Contributed" />
         </q-item>
-
-        <q-item @click.native="openURL('https://forms.gle/4ei8WGTGsc8ac6ZG8')">
-          <q-item-side icon="assignment" />
-          <q-item-main label="Sign-up & Survey" sublabel="Newsletter Signup & More" />
-        </q-item>
       </q-list>
 
       <q-list no-border link class="col-shrink q-py-md">
         <q-item-label>
-          <center><em><b>--- Coloradans ---</b><br><br></em></center>
+          <center><em><b>--- For Coloradans ---</b><br><br></em></center>
         </q-item-label>
 
-        <q-item @click.native="openURL('https://www.meetup.com/Denver-Blockchain/')">
-          <q-item-side icon="laptop_chromebook" />
-          <q-item-main label="FREE Coworking" sublabel="Thursdays in Denver" />
-        </q-item>
-
-        <q-item @click.native="openURL('https://www.meetup.com/Denver-Blockchain/')">
-          <q-item-side icon="people" />
-          <q-item-main label="Meetups" sublabel="Local Groups" />
+        <q-item @click.native="openURL('https://www.meetup.com/Cryptorado-Community')">
+          <q-item-side icon="fab fa-meetup" />
+          <q-item-main label="Meetup" sublabel="Local and Virtual Events" />
         </q-item>
 
         <q-item @click.native="openURL('https://coinmap.org/#/map/39.76442532/-104.85478670/11')">

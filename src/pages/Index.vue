@@ -34,8 +34,8 @@
 
         <center>
           <div>
-            <q-btn rounded class="shadow-24" style="padding:3vh 10vw" glossy color="tertiary" text-color="white" size="md" label="Online Chat" icon="fab fa-keybase" icon-right="fab fa-keybase"
-              @click.native="openURL('https://keybase.io/team/cryptorado.public')" />
+            <q-btn rounded glossy class="shadow-5" style="padding:3vh 10vw" color="secondary" text-color="black" size="md" label="Community Chat" icon="fab fa-discord" icon-right="fab fa-discord"
+              @click.native="openURL('https://discord.gg/3eVjbtb')" />
           </div>
         </center>
 
@@ -46,11 +46,11 @@
         </center>
 
         <center>
-          <q-btn glossy class="shadow-24" style="padding:1vh 5vw; margin:10px 20px" color="secondary" text-color="black" size="md" to="Events" icon="calendar_today" label="Events" />
+          <q-btn rounded glossy class="shadow-5" style="padding:1vh 5vw; margin:10px 20px" color="secondary" text-color="black" size="md" to="Resources" icon-right="device_hub" icon="device_hub" label="Resources" />
 
-          <q-btn rounded class="shadow-24" style="padding:10px 10vw" glossy color="primary" text-color="black" size="md" label="Sign-up Survey" icon="assignment" icon-right="assignment" @click.native="openURL('https://forms.gle/4ei8WGTGsc8ac6ZG8')" />
+          <q-btn rounded glossy class="shadow-5" style="padding:2vh 10vw; margin:10px 20px" color="secondary" text-color="black" size="md" to="Events" icon="calendar_today" icon-right="calendar_today" label="Events" />
 
-          <q-btn glossy class="shadow-24" style="padding:1vh 5vw; margin:10px 20px" color="secondary" text-color="black" size="md" to="Resources" icon-right="device_hub" label="Resources" />
+          <q-btn rounded glossy class="shadow-5" style="padding:1vh 5vw; margin:10px 20px" color="secondary" text-color="black" size="md" to="Supporters" icon="fab fa-bitcoin" icon-right="fab fa-ethereum" label="Supporters" />
         </center>
 
         <center>
@@ -60,7 +60,7 @@
         </center>
 
         <center>
-          <div style="margin-top:4vh; padding-bottom:0px; font-size:large">
+          <div style="margin-top:4vh; padding-bottom:0px; font-size:medium">
             <b><em> Contact us: <a target="_blank" href="mailto:community@cryptorado.org">community@cryptorado.org</a> </em></b>
           </div>
         </center>
