@@ -22,7 +22,7 @@
       <center>
         <div>
           <q-btn rounded glossy class="shadow-5" style="padding:2vh 6vw; margin:-3vh 0 1vh 0"  color="secondary" text-color="black" size="lg" label="Donate to our Grant"
-            @click.native="openURL('https://discord.gg/3eVjbtb')" />
+            @click.native="openURL('https://discord.gg/gWcej9rUxN')" />
         </div>
       </center>
 

@@ -9,7 +9,7 @@
           <center><em><b>--- For Everyone ---</b><br><br></em></center>
         </q-item-label>
 
-        <q-item @click.native="openURL('https://discord.gg/3eVjbtb')">
+        <q-item @click.native="openURL('https://discord.gg/gWcej9rUxN')">
           <q-item-side icon="fab fa-discord" />
           <q-item-main label="Discord Community" sublabel="Public Group" />
         </q-item>

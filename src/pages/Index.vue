@@ -35,7 +35,7 @@
         <center>
           <div>
             <q-btn rounded glossy class="shadow-5" style="padding:3vh 10vw" color="secondary" text-color="black" size="md" label="Community Chat" icon="fab fa-discord" icon-right="fab fa-discord"
-              @click.native="openURL('https://discord.gg/3eVjbtb')" />
+              @click.native="openURL('https://discord.gg/gWcej9rUxN')" />
           </div>
         </center>
 
